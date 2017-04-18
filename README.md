@@ -12,6 +12,6 @@ All content within WebGM (that is to say, the random generators, the lists used 
 Find it at https://yodrab.github.io/WebGM/
 
 Credit is given to the following:
- SoloRPG at https://www.rpgsolo.com/
- FU: The Freeform/Universal RPG, at http://perilplanet.com/fu-rpg/
+ - SoloRPG at https://www.rpgsolo.com/
+ - FU: The Freeform/Universal RPG, at http://perilplanet.com/fu-rpg/
  
