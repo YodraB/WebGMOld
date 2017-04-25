@@ -4,15 +4,15 @@
 // General Functions
 
 function randomPick(array) {
- var randomNumber = Math.floor(Math.random() * (array.length));
- return array[randomNumber];
+	var randomNumber = Math.floor(Math.random() * (array.length));
+	return array[randomNumber];
 }
 
 function print(str) {
- if (document.getElementById("display").value == '') {
-  document.getElementById("display").value = str;
- } else {
-  document.getElementById("display").value = (document.getElementById("display").value + " \n" + str);
+	if (document.getElementById("display").value == '') {
+		document.getElementById("display").value = str;
+	} else {
+		document.getElementById("display").value = (document.getElementById("display").value + " \n" + str);
  }
 }
 
@@ -66,47 +66,74 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 // Y/N
 
 function yesno() {
- var yn = Math.random()
- var answer = ''
- var ynAnd = [', and...', ', but...', ', because...']
- var ynAndChance = Math.random()
- var chance = document.getElementById("slider").value / 20
- yn = yn + chance
- if (yn > 1) {
-  answer = 'yes'
- } else {
-  answer = 'no'
- }
- if (ynAndChance > 0.5) {
-  answer = answer + randomPick(ynAnd)
- }
- print(answer)
+	var yn = Math.random()
+	var answer = ''
+	var ynAnd = [', and...', ', but...', ', because...']
+	var ynAndChance = Math.random()
+	var chance = document.getElementById("ynSlider").value / 20
+	yn = yn + chance
+	if (yn > 1) {
+		answer = 'yes'
+	} else {
+		answer = 'no'
+	}
+	if (ynAndChance > 0.5) {
+		answer = answer + randomPick(ynAnd)
+	}
+	print(answer)
 }
 
-function showValue(newValue) {
- newValue = newValue * 5
- document.getElementById("chance").innerHTML=newValue + '% yes'
+function ynShowValue(newValue) {
+	newValue = newValue * 5
+	document.getElementById("chance").innerHTML=newValue + '% yes'
 }
 
 // Fudge/Fate dice
 
 function fudgefate() {
- ffValues = ['-', '0', '+']
- dieA = randomPick(ffValues)
- dieB = randomPick(ffValues)
- dieC = randomPick(ffValues)
- dieD = randomPick(ffValues)
- ffDice = [dieA, dieB, dieC, dieD]
- ffTotal = 0
- for (i = 0; i < 4; i++) {
-  if (ffDice[i] == '+') {
-   ffTotal = ffTotal + 1
-  } else if (ffDice[i] == '-') {
-   ffTotal = ffTotal - 1
-  }
- } 
- print(dieA + ', ' + dieB + ', ' + dieC + ', ' + dieD + ' total:' + ffTotal)
+	ffValues = ['-', '0', '+']
+	dieA = randomPick(ffValues)
+	dieB = randomPick(ffValues)
+	dieC = randomPick(ffValues)
+	dieD = randomPick(ffValues)
+	ffDice = [dieA, dieB, dieC, dieD]
+	ffTotal = 0
+	for (i = 0; i < 4; i++) {
+		if (ffDice[i] == '+') {
+			ffTotal = ffTotal + 1
+		} else if (ffDice[i] == '-') {
+			ffTotal = ffTotal - 1
+		}
+	} 
+	print(dieA + ', ' + dieB + ', ' + dieC + ', ' + dieD + ' total:' + ffTotal)
 }
+
+// Damage
+
+var severity = ['life-threatening', 'life-threatening', 'critical', 'critical', 'severe', 'severe', 'moderate', 'moderate', 'moderate', 'moderate', 'moderate', 'moderate', 'minor', 'minor', 'minor', 'minor', 'minor', 'minor', 'negligible', 'negligible', 'negligible']
+
+var area = ['head', 'torso', 'left arm', 'right arm', 'left leg', 'right leg']
+
+function damageShowValue(newValue) {
+	newValue = newValue
+	document.getElementById("danger").innerHTML='danger level ' + newValue
+}
+
+function damage() {
+	var hit = randomPick(area);
+	var damageNumber = Math.floor(Math.random() * (severity.length));
+	var danger = document.getElementById("damageSlider").value - 10;
+	var change = damageNumber - danger;
+	if (change < 0) {
+		change = 0;
+	} else if ( change > 20) {
+		change = 20;
+		print('test');
+	}
+	var mod = severity[change];
+	print(mod + ' hit to the ' + hit);
+}
+
 
 // Character Generator - age, sex, characteristic
 
@@ -117,10 +144,10 @@ var sexes = ['male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'ma
              'female', 'female', 'female', 'female', 'female', 'female', 'female', 'neither male nor female']
 
 function character() {
- var age = randomPick(ages);
- var sex = randomPick(sexes);
- var char = randomPick(characteristics);
- print(age + ', ' + sex + ', ' + char);
+	var age = randomPick(ages);
+	var sex = randomPick(sexes);
+	var char = randomPick(characteristics);
+	print(age + ', ' + sex + ', ' + char);
 }
 
 
@@ -150,13 +177,13 @@ var bodyTypes = ['towering', 'tall', 'lanky', 'leggy', 'thin', 'angular', 'gaunt
                  'plump', 'overweight', 'top-heavy', 'big-hipped', 'broad-shouldered']
 
 function appearance() {
- var hairAdj = randomPick(hairDescs);
- var hairColor = randomPick(hairColors);
- var eyeAdj = randomPick(eyeDescs);
- var eyeColor = randomPick(eyeColors);
- var skin = randomPick(skinColors);
- var body = randomPick(bodyTypes);
- print(body + ", with " + hairAdj + " " + hairColor + " hair, " + eyeAdj + " " + eyeColor + " eyes, and " + skin + " skin");
+	var hairAdj = randomPick(hairDescs);
+	var hairColor = randomPick(hairColors);
+	var eyeAdj = randomPick(eyeDescs);
+	var eyeColor = randomPick(eyeColors);
+	var skin = randomPick(skinColors);
+	var body = randomPick(bodyTypes);
+	print(body + ", with " + hairAdj + " " + hairColor + " hair, " + eyeAdj + " " + eyeColor + " eyes, and " + skin + " skin");
 }
 
 // Role
@@ -177,8 +204,8 @@ var roles = ['administrator', 'adventurer', 'advisor', 'agent', 'ambassador', 'a
              'trader', 'trickster', 'vigilante', 'wanderer', 'warden', 'warlord', 'warrior', 'writer', 'zealot']
 
 function role() {
- var role = randomPick(roles);
- print(role);
+	var role = randomPick(roles);
+	print(role);
 }
 
 // Friendliness
@@ -187,8 +214,8 @@ var fof = ['worships', 'loves', 'likes', 'is friendly with', 'is neutral towards
            'hates', 'truly loathes']
 
 function friend() {
- var friendly = randomPick(fof);
- print (friendly + " the person");
+	var friendly = randomPick(fof);
+	print (friendly + " the person");
 }
 
 // Quirk
@@ -241,11 +268,11 @@ var quirks = ['believe the end is near', 'know a secret', 'can juggle', "can't s
               'are extremely disorganized', 'follow a complex code of honor', 'have an unusual obsession', 
               'have an over-active libido', 'are asexual', 'have an unusual sexual preference', 'are always flirting',
               'are an adrenaline junkie', 'have a morbid fascination with death and disease', 'are a bit paranoid', 
-              'struggle with delusions', 'are well-off', 'fret about their health']
+              'struggle with delusions', 'are well-off', 'fret about their health', 'walk with a cane', 'have a disability', 'sing soprano']
 
 function quirk() {
- var quirk = randomPick(quirks);
- print ("they " + quirk);
+	var quirk = randomPick(quirks);
+	print ("they " + quirk);
 }
 
 //Fantasy Peoples
@@ -265,14 +292,14 @@ var rarity = [commonSpecies, commonSpecies, commonSpecies, commonSpecies, common
               uncommonSpecies, rareSpecies]
 
 function fPeoples() {
- var rare = randomPick(rarity);
- var species = randomPick(rare);
- var half = Math.random()
- if (half < 0.1) {
-  print("half-" + species);
- } else {
-  print(species);
- }
+	var rare = randomPick(rarity);
+	var species = randomPick(rare);
+	var half = Math.random()
+	if (half < 0.1) {
+		print("half-" + species);
+	} else {
+		print(species);
+	}
 }
 
 
@@ -294,13 +321,13 @@ var aliens = ['hive-mind', 'animal-like', 'cannibalistic', 'crystaline', 'immobi
               'extinct', 'highly artistic', 'highly mercantile', 'cloning-based', 'infection-based']
 
 function sPeoples() {
- var descrip = randomPick(characteristics);
- var aliensA = randomPick(aliens);
- var aliensB = randomPick(aliens);
- while (aliensA == aliensB) {
-  aliensB = randomPick(aliens);
- }
- print("A " + descrip +", " + aliensA + ", " + aliensB + " people");
+	var descrip = randomPick(characteristics);
+	var aliensA = randomPick(aliens);
+	var aliensB = randomPick(aliens);
+	while (aliensA == aliensB) {
+		aliensB = randomPick(aliens);
+	}
+	print("A " + descrip +", " + aliensA + ", " + aliensB + " people");
 }
 
 // Creature Generator
@@ -355,27 +382,27 @@ var design = ['striped with', 'with small spots of',  'with large, irregular spo
               'with blotches of', 'with patches of', 'with horizontal stripes of', 'and', 'and', 'and', 'and', 'and']
 
 function creature() {
- var nsize = randomPick(size);
- var nlike = randomPick(like);
- var nbut = randomPick(but);
- var nhead = randomPick(head);
- var nextras = randomPick(extras);
- var nfight = randomPick(fight);
- var ncover = randomPick(cover);
- var ndesign = randomPick(design);
- var ncolorA = randomPick(color);
- var ncolorB = randomPick(color);
- var text = 'This creature is the size of ' + nsize + ' and resembles ' + nlike + ', but ' + nbut + '. It has ' + nhead + ', ' + nextras + ', and ' + nfight + '. It is ' + ncover + ' and is ';
- var blanket = Math.random()
-  while (ncolorA == ncolorB) {
-  ncolorB = randomPic(color);
- }
- if (blanket > 0.49) {
-  text = text + ncolorA + '.';
- } else {
-  text = text + ncolorA + ' ' + ndesign + ' ' + ncolorB + '.';
- }
- print(text);
+	var nsize = randomPick(size);
+	var nlike = randomPick(like);
+	var nbut = randomPick(but);
+	var nhead = randomPick(head);
+	var nextras = randomPick(extras);
+	var nfight = randomPick(fight);
+	var ncover = randomPick(cover);
+	var ndesign = randomPick(design);
+	var ncolorA = randomPick(color);
+	var ncolorB = randomPick(color);
+	var text = 'This creature is the size of ' + nsize + ' and resembles ' + nlike + ', but ' + nbut + '. It has ' + nhead + ', ' + nextras + ', and ' + nfight + '. It is ' + ncover + ' and is ';
+	var blanket = Math.random()
+	while (ncolorA == ncolorB) {
+		ncolorB = randomPic(color);
+	}
+	if (blanket > 0.49) {
+		text = text + ncolorA + '.';
+	} else {
+		text = text + ncolorA + ' ' + ndesign + ' ' + ncolorB + '.';
+	}
+	print(text);
 }
 
 // Event
@@ -413,6 +440,33 @@ var events = ['you lose something important', 'you find out you\'re surrounded',
               'a being of phenomenal power stops by for a chat', 'you regret everything']
 
 function eventGen() {
- var event = randomPick(events);
- print(event);
+	var event = randomPick(events);
+	print(event);
+}
+
+// Setting
+
+var settings = ['a burned building', 'a tavern', 'a pit', 'a shop', 'a marketplace', 'a tall building', 'a beach', 'an island', 'a mountaintop', 'in space', 'in the future', 'out west', 'at home', 'a bountiful kindom', 'a castle', 'a library', 'a cottage', 'the plains', 'a sacred spot', 'a shrine', 'a sentient location', 'the savanna', 'the desert', 'the rainforest', 'the arctic', 'a temperate forest', 'a hospital', 'a museum', 'a school', 'a university', 'a casino', 'a church', 'a squat building', 'a row of connected buildings', 'a row of townhouses', 'a store', "an artisan's workshop", 'a cafe', 'a resteraunt', 'an inn', 'a swanky hotel', 'a resort', 'a hunting cabin', 'a volcano', 'a weekend getaway', 'a den of dangerous beasts', 'a peaceful fishing village', 'a calm harbour', 'stormy seas', 'river rapids', 'a waterfall', 'a cave', 'on a ship', 'above the clouds', 'a forbidden chamber', 'a hidden compartment', 'a secret door', 'a huge statue', 'an ancient monument', 'mysterious ruins', 'an observation dome', 'a closet', 'a dungeon', 'a swamp', 'a meadow', 'a field of wheat', 'a field of wildflowers', 'a pasture, with animals grazing', 'a crack in the wall', 'underground', 'a bunker', 'a monestary', 'a park', 'a warehouse', 'a theater', 'a sports arena', 'a circus', 'a public bath', 'a sumptious garden', 'a supply depot', 'a mansion', 'a great estate', 'a squalid hovel', 'a comfortable home', 'a cafeteria', 'a bathroom', 'a conservatory', 'a building site', 'a lake', 'a farm', 'a secluded clearing', 'a kitchen', 'a factory', 'a prison', 'a courtroom', 'a bureaucratic building', 'a dock', 'a loading bay', 'a power station', 'a sewer', 'a garbage dump', 'an apothecary', 'an emergency room', 'a sanitarium', 'a morgue', 'a cemetary', 'a brothel', 'a back alley', 'a black market', 'a watchtower', 'an abandoned building', 'a research facility', 'a bank', 'an art gallery', 'an apartment building', 'surrounded by stacks of books', 'a war-torn countryside', 'a busy intersection', 'an icy winter', 'a swltering summer', 'a moderate autumn', 'a pleasant spring', 'a canyon', 'a city', 'a crowded space', 'a space full of odds and ends', 'a high-stakes chase', 'a domed city', 'changing times']
+
+function setting() {
+	var settingA = randomPick(settings);
+	var settingB = randomPick(settings);
+	var settingC = randomPick(settings);
+	var settingNum = Math.floor(Math.random() * (3)) + 1
+	var settingArray = [settingA, settingB, settingC]
+	var settingText = ''
+	for (i = 0; i < settingNum; i++) {
+		settingText = settingText + settingArray[i] + '... '
+	}
+	print(settingText);
+}
+
+// Item
+
+var items = ['ancient artifact', 'orb of power', 'device with many buttons', 'key', 'woven basket', 'other-planar scanner', 'animalistic talisman', 'vital signs monitor', 'simple case', 'hairbrush', 'cleaning implement', 'blue bucket', 'light source', 'bolt of cloth', 'cooling apparatus', 'heating apparatus', 'precious statue', 'interesting text', 'important message', 'doll', 'toy weapon', 'soft toy', 'complex puzzle', 'stylish hat', 'unusual hat', 'hat', 'drinking glass', 'sprig of a plant', 'small purse', 'pouch', 'stunning flower', 'flower', 'interesting rock', 'item of clothing', 'pair of pants', 'jumpsuit', 'robe', 'dress', 'skirt', 'pair of socks', 'book of riddles', 'filtering device', 'tight spring', 'power tool', 'implement of legend', 'box making small noises', 'official certificate', 'lucky ticket', "object d'art", 'bag of tricks', 'deck of cards', 'set of dice', 'badge with a sigil', 'old memento', 'folding fan', 'musical instrument', 'bottle of pills', 'flask of unknown liquid', 'ancient bone', 'shiny coin', 'religious artifact', 'powerful talisman', 'stylized mask', 'red sphere', 'blue sphere', 'shimmering sphere', 'pair of shoes', 'piece of jewelry', 'piece of fruit', 'piece of candy', 'rubber ball', 'piece of scrap metal', 'poweful ointment', 'small bottle of perfume', 'type of medicine', 'private journal', 'wide bangle', 'dangling earring', 'jewelled necklace', 'ring of power', 'portrait', 'moving picture', 'rocking chair', 'fainting couch', 'item of fine lace', 'curious biological remnant', 'sturdy pack', 'bag of holding', 'pair of scissors', 'pair of underwear', 'belt with pouches', 'tribal artifact', 'crystal sphere', 'small bell', 'bell', 'ugly sweater', 'expensive writing implement', 'writing implement', 'mysterious paste', 'minature world', 'exotic portal', 'warm beverage', 'spatula', 'bulky glasses', 'tacky knick-knack', 'general-purpose adhesive', 'communication device', 'extra-ordinary shield', 'cheap trinket', 'piece of rotting food', 'pile of detritus', 'wind-up automoton', 'part of a crumbling wall', 'picnic lunch', 'flying craft', 'tough rope', 'belt', 'buckle', 'painting', 'goblet', 'giant gong', 'hookah', 'piece of climbing equipment', 'apron', 'glider', 'boat', 'large basin', 'exotic plant', 'bottle of a beverage', 'light shirt', 'long pole', 'walking stick', 'piece of equipment for travelling through snow', 'green backpack', 'brown backpack', 'large bag', 'backpack', 'supply of ammunition', 'raft', 'inner tube', 'pair of sturdy waterproof shoes', 'harpoon', 'screw', 'nut', 'bolt', 'helmet', 'all-terrain vehicle', 'pair of strange glasses', 'form of hovering transportation', 'pair of working boots', 'piece of cold weather gear', 'gardening tool', 'flare', 'travel record', 'signaling device', 'first aid kit', 'package of trail rations', 'vermin repellant', 'fishing rod', 'mechanical spare part', 'fossil', 'jewelry box', 'native artifact', 'wall decoration', 'piece of traditional art', 'pillow', 'blanket', 'small animal', 'large animal', 'riding animal', 'animal', 'joke item', 'mug', 'large kite', 'special soap', 'piece of ceremonial clothing', 'vizer', 'hammer', 'crowbar', 'shovel', 'chisel', 'kit of art supplies', 'package of spices', 'fire starter', 'map', 'navigational aid', 'form of skin protection', 'jug', 'lockbox', 'distance-seeing tool', 'hankie', 'set of chimes', 'multi-function tool', 'kind of harness', 'crown', 'decorative comb', 'sleeping bag', 'portable shelter', 'magnifying glass', 'packet of biscuits', 'packet of jerky', 'vitamin supplement', 'barrel', 'decent amount of water', 'headscarf', 'pair of gloves', 'watch', 'shell', 'axe', 'spigot', 'piece of riding equipment', 'knife', 'bundle of netting', 'pipe', 'image-capturing device', 'amphora', 'time-keeping method', 'wrench', 'feather', 'intelligent item', 'ring', 'rod', 'vial of acid', 'vial of poison', 'bomb', 'mask', 'flag', 'exotic weapon', 'protective field', 'pair of handcuffs', 'ship', 'towel', 'pile of dust', 'seed', 'fine chain', 'heavy chain', 'lock', 'calculator', 'pair of goggles', 'grappling hook', 'ladder', 'periscope', 'umbrella', 'grooming kit', 'metal spike', 'bathtub', 'folding chair', 'hammock', 'fishing gear', 'mirror', 'bit of string', 'spool of string', 'horn', 'whistle', 'star chart', 'container of tea', 'box of chocolates', 'piece of meat', 'mysterious spore', 'dusting of sulphur', 'black powder', 'vial of solvent', 'deoderant', 'thick gel', 'intriguing lure', 'flying animal', 'carnivorous animal', 'domesticated animal', 'tranquilizer', 'wig', 'sash', 'coffin', 'small statue', 'huge statue', 'sled', 'boat', 'holy text', 'holy symbol', 'crystal', 'access card', 'energy source', 'cable', 'cortical implant', 'rift-born sphere', 'metal bucket', 'bucket', 'saber', 'scimitar', 'sword', 'pair of nunchuks', 'dagger', 'gun', 'projectile weapon', 'mace', 'maul', 'sickle', 'whip', 'cudgel', 'two-handed sword', 'shortsword', 'flail', 'crossbow']
+
+
+function genItem() {
+	var item = randomPick(items)
+	print(item)
 }
