@@ -12,6 +12,9 @@ All content within WebGM (that is to say, the random generators, the lists used 
 Find it at https://yodrab.github.io/WebGM/
 
 Credit is given to the following:
- - SoloRPG at https://www.rpgsolo.com/
+ - SoloRPG at https://www.rpgsolo.com/ (for inspiration only)
  - FU: The Freeform/Universal RPG, at http://perilplanet.com/fu-rpg/
- 
+ - Zero Dice, at http://tangent-zero.com/zero_dice/zero_dice.htm (for inspiration only)
+ - GameIcons.net, at http://game-icons.net/
+ - the Fudge RPG system, at http://fudgerpg.com/
+ - the Fate RPG system, at https://fate-srd.com/
