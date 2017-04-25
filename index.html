@@ -8,9 +8,12 @@
  <textarea id="display" rows= 10 cols=50></textarea>
  <br>
   <button onclick="yesno()">Yes/No</button>
- <input type="range" id="slider" min="1" max="19" value="10" onchange="showValue(this.value)">
+ <input type="range" id="ynSlider" min="1" max="19" value="10" onchange="ynShowValue(this.value)">
  <span id="chance">50% yes</span>
  <button onclick="fudgefate()">F/F dice</button>
+ <button onclick="damage()">Damage</button>
+ <input type="range" id="damageSlider" min="0" max="10" value="1" onchange="damageShowValue(this.value)">
+ <span id="danger">danger level 1</span>
  <br>
  <button onclick="character()">Character</button>
  <button onclick="appearance()">Appearance</button>
@@ -23,6 +26,8 @@
  <button onclick="creature()">Creature</button>
  <br>
  <button onclick="eventGen()">Event</button>
+ <button onclick="setting()">Setting</button>
+ <button onclick="genItem()">Item</button>
  <br>
 
  <!-- Credits -->
@@ -30,4 +35,3 @@
 <script src="indexJS.js"></script>
 
 </body>
-</html>
