@@ -20,5 +20,7 @@ Credit is given to the following:
  - GameIcons.net, at http://game-icons.net/
  - the Fudge RPG system, at http://fudgerpg.com/
  - the Fate RPG system, at https://fate-srd.com/
+ 
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/YodraB/WebGM/blob/changes/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-For more assistance, please see the wiki and/or email WebGMProject@gmail.com.
+For more assistance, please see the [wiki](https://github.com/YodraB/WebGM/wiki) and/or email WebGMProject@gmail.com.
