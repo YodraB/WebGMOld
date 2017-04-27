@@ -21,4 +21,4 @@ Credit is given to the following:
  - the Fudge RPG system, at http://fudgerpg.com/
  - the Fate RPG system, at https://fate-srd.com/
 
-For more assistance, please see the wiki and/or email yodrab@gmail.com.
+For more assistance, please see the wiki and/or email WebGMProject@gmail.com.
