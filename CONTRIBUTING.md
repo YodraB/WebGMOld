@@ -4,7 +4,7 @@ Documentation for the project can be found at the [wiki](https://github.com/Yodr
 
 For suggestions of features, improvements, etc., please submit an issue labeled as an enhancement via the [issues tracker](https://github.com/YodraB/WebGM/issues)
 
-Code of Conduct is coming soon. 
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/YodraB/WebGM/blob/changes/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 ### Bugs
 
