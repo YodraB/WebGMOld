@@ -23,7 +23,7 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 
 // Glyph
 
-var glyphs = ["psword.png", "direwolf.png", "evilbat.png", "piercedheart.png"]
+var glyphs = ["direwolf.png", "evil-bat.png", "pierced-heart.png", "piercing-sword.png"]
 
 function displayImage(){
 	document.getElementById('canvasA').src = randomPick(glyphs)
