@@ -28,7 +28,7 @@ function yesno() {
 	var answer = ''
 	var ynAnd = [', and...', ', but...', ', because...']
 	var ynAndChance = Math.random()
-	var chance = document.getElementById("ynSlider").value / 20
+	var chance = document.getElementById("ynSlider").value / 2
 	yn = yn + chance
 	if (yn > 1) {
 		answer = 'yes'
@@ -46,9 +46,22 @@ function ynShowValue(newValue) {
 	document.getElementById("chance").innerHTML=newValue + '% yes'
 }
 
+// Roll custom dice
+
+function customDice(){
+	var diceSides = document.getElementById("diceSides").value
+	var numDice = document.getElementById("numDice").value
+	var results = []
+	for (i = 0; i < numDice; i++){
+		var randomNumber = (Math.floor(Math.random() * (diceSides))) + 1;
+		results += randomNumber + ", "
+	}
+	print(results)
+}
+
 // Fudge/Fate dice
 
-function fudgefate() {
+function fudgefate
 	ffValues = ['-', '0', '+']
 	dieA = randomPick(ffValues)
 	dieB = randomPick(ffValues)
@@ -58,7 +71,7 @@ function fudgefate() {
 	ffTotal = 0
 	for (i = 0; i < 4; i++) {
 		if (ffDice[i] == '+') {
-			ffTotal = ffTotal + 1
+			ffTotal = ffTotal + 
 		} else if (ffDice[i] == '-') {
 			ffTotal = ffTotal - 1
 		}
