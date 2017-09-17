@@ -23,12 +23,11 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 
 // Glyph
 
-var glyphs = ["direwolf.png", "evil-bat.png", "pierced-heart.png", "piercing-sword.png"]
+var glyphs = ["direwolf.png", "evil-bat.png", "pierced-heart.png", "piercing-sword.png", "egg-clutch.png", "swan-breeze.png", "radial-balance.png", "slashed-shield.png", "roman-shield.png", "energy-shield.png", "shield-echoes.png", "star-sattelites.png", "alien-stare.png", "black-hole-bolas.png", "evil-moon.png"]
 
 function displayImage(){
 	document.getElementById('canvasA').src = randomPick(glyphs)
-	document.getElementById('canvasB').src = randomPick(glyphs)
-	document.getElementById('canvasC').src = randomPick(glyphs)
+	document.getElementById('canvasB').src = randomPick(glyphs	document.getElementById('canvasC').src = randomPick(glyphs)
 }
 
 // Y/N
