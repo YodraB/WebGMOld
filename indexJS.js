@@ -27,7 +27,8 @@ var glyphs = ["direwolf.png", "evil-bat.png", "pierced-heart.png", "piercing-swo
 
 function displayImage(){
 	document.getElementById('canvasA').src = randomPick(glyphs)
-	document.getElementById('canvasB').src = randomPick(glyphs	document.getElementById('canvasC').src = randomPick(glyphs)
+	document.getElementById('canvasB').src = randomPick(glyphs)
+	document.getElementById('canvasC').src = randomPick(glyphs)
 }
 
 // Y/N
