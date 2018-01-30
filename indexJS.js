@@ -23,12 +23,16 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 
 // Glyph
 
-var glyphs = ["direwolf.png", "evil-bat.png", "pierced-heart.png", "piercing-sword.png"]
+var glyphs = ["direwolf.png", "evil-bat.png", "pierced-heart.png", "piercing-sword.png", "egg-clutch.png", "swan-breeze.png", "radial-balance.png", "slashed-shield.png", "roman-shield.png", "energy-shield.png", "shield-echoes.png", "star-sattelites.png", "alien-stare.png", "black-hole-bolas.png", "evil-moon.png", "drink-me.png", "bubbling-flask.png", "aquarium.png", "fire-bottle.png", "ice-bolt.png", "gem-chain.png", "desert-skull.png", "crowned-skull.png", "coronation.png", "crown-coin.png", "shiny-purse.png", "bindle.png", "cauldron.png", "sinking-ship.png", "drakkar.png", "spiral-arrow.png", "bubbling-bowl.png", "gas-mask.png", "smoke-bomb.png", "shouting.png", "carnyx.png", "sound-waves.png", "ringing-bell.png", "serrated-slash.png"]
 
 function displayImage(){
-	document.getElementById('canvasA').src = randomPick(glyphs)
-	document.getElementById('canvasB').src = randomPick(glyphs)
-	document.getElementById('canvasC').src = randomPick(glyphs)
+	glyphA = randomPick(glyphs)
+	glyphB = randomPick(glyphs)
+	glyphC = randomPick(glyphs)
+	document.getElementById('canvasA').src = glyphA
+	document.getElementById('canvasB').src = glyphB
+	document.getElementById('canvasC').src = glyphC
+	print(glyphA + ", " + glyphB + ", " + glyphC)
 }
 
 // Y/N
