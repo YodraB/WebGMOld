@@ -23,52 +23,52 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 
 // Glyph
 
-var glyphs = ["WebGM/Glyphs/acid.png"]
+var glyphs = ["Glyphs/acid.png"]
 
 function displayImage(){
-	glyphA = randomPick(glyphs)
-	glyphB = randomPick(glyphs)
-	glyphC = randomPick(glyphs)
-	document.getElementById('canvasA').src = glyphA
-	document.getElementById('canvasB').src = glyphB
-	document.getElementById('canvasC').src = glyphC
-	print(glyphA + ", " + glyphB + ", " + glyphC)
+	glyphA = randomPick(glyphs);
+	glyphB = randomPick(glyphs);
+	glyphC = randomPick(glyphs);
+	document.getElementById('canvasA').src = glyphA;
+	document.getElementById('canvasB').src = glyphB;
+	document.getElementById('canvasC').src = glyphC;
+	print(glyphA + ", " + glyphB + ", " + glyphC);
 }
 
 // Y/N
 
 function yesno() {
-	var yn = Math.random()
-	var answer = ''
-	var ynAnd = [', and...', ', but...', ', because...']
-	var ynAndChance = Math.random()
-	var chance = document.getElementById("ynSlider").value / 20
-	yn = yn + chance
+	var yn = Math.random();
+	var answer = '';
+	var ynAnd = [', and...', ', but...', ', because...'];
+	var ynAndChance = Math.random();
+	var chance = document.getElementById("ynSlider").value / 20;
+	yn = yn + chance;
 	if (yn > 1) {
-		answer = 'yes'
+		answer = 'yes';
 	} else {
-		answer = 'no'
+		answer = 'no';
 	}
 	if (ynAndChance > 0.5) {
-		answer = answer + randomPick(ynAnd)
+		answer = answer + randomPick(ynAnd);
 	}
-	print(answer)
+	print(answer);
 }
 
 function ynShowValue(newValue) {
-	newValue = newValue * 5
-	document.getElementById("chance").innerHTML=newValue + '% yes'
+	newValue = newValue * 5;
+	document.getElementById("chance").innerHTML=newValue + '% yes';
 }
 
 // Roll custom dice
 
 function customDice(){
-	var diceSides = document.getElementById("diceSides").value
-	var numDice = document.getElementById("numDice").value
-	var results = []
+	var diceSides = document.getElementById("diceSides").value;
+	var numDice = document.getElementById("numDice").value;
+	var results = [];
 	for (i = 0; i < numDice; i++){
 		var randomNumber = (Math.floor(Math.random() * (diceSides))) + 1;
-		results += randomNumber + ", "
+		results += randomNumber + ", ";
 	}
 	print(results)
 }
@@ -76,21 +76,21 @@ function customDice(){
 // Fudge/Fate dice
 
 function fudgefate() {
-	ffValues = ['-', '0', '+']
-	dieA = randomPick(ffValues)
-	dieB = randomPick(ffValues)
-	dieC = randomPick(ffValues)
-	dieD = randomPick(ffValues)
-	ffDice = [dieA, dieB, dieC, dieD]
-	ffTotal = 0
+	ffValues = ['-', '0', '+'];
+	dieA = randomPick(ffValues);
+	dieB = randomPick(ffValues);
+	dieC = randomPick(ffValues);
+	dieD = randomPick(ffValues);
+	ffDice = [dieA, dieB, dieC, dieD];
+	ffTotal = 0;
 	for (i = 0; i < 4; i++) {
 		if (ffDice[i] == '+') {
-			ffTotal = ffTotal + 1
+			ffTotal = ffTotal + 1;
 		} else if (ffDice[i] == '-') {
-			ffTotal = ffTotal - 1
+			ffTotal = ffTotal - 1;
 		}
 	} 
-	print(dieA + ', ' + dieB + ', ' + dieC + ', ' + dieD + ' total: ' + ffTotal)
+	print(dieA + ', ' + dieB + ', ' + dieC + ', ' + dieD + ' total: ' + ffTotal);
 }
 
 // Damage
@@ -100,8 +100,8 @@ var severity = ['life-threatening', 'life-threatening', 'critical', 'critical', 
 var area = ['head', 'torso', 'left arm', 'right arm', 'left leg', 'right leg']
 
 function damageShowValue(newValue) {
-	newValue = newValue
-	document.getElementById("danger").innerHTML='danger level ' + newValue
+	newValue = newValue;
+	document.getElementById("danger").innerHTML='danger level ' + newValue;
 }
 
 function damage() {
@@ -281,11 +281,11 @@ function setting() {
 	var settingA = randomPick(settings);
 	var settingB = randomPick(settings);
 	var settingC = randomPick(settings);
-	var settingNum = Math.floor(Math.random() * (3)) + 1
-	var settingArray = [settingA, settingB, settingC]
-	var settingText = ''
+	var settingNum = Math.floor(Math.random() * (3)) + 1;
+	var settingArray = [settingA, settingB, settingC];
+	var settingText = '';
 	for (i = 0; i < settingNum; i++) {
-		settingText = settingText + settingArray[i] + '... '
+		settingText = settingText + settingArray[i] + '... ';
 	}
 	print(settingText);
 }
@@ -296,6 +296,6 @@ var items = ['ancient artifact', 'orb of power', 'device with many buttons', 'ke
 
 
 function genItem() {
-	var item = randomPick(items)
-	print(item)
+	var item = randomPick(items);
+	print(item);
 }
