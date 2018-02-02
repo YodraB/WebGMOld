@@ -23,10 +23,11 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 
 // Glyph
 
-var glyphs = ["Glyphs/acid.png"]
+var prefix = "Glyphs/"
+var glyphs = ["acid.png"]
 
 function displayImage(){
-	glyphA = randomPick(glyphs);
+	glyphA = randomPick(prefix + glyphs);
 	glyphB = randomPick(glyphs);
 	glyphC = randomPick(glyphs);
 	document.getElementById('canvasA').src = glyphA;
