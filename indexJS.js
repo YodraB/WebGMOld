@@ -23,7 +23,7 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 
 // Glyph
 
-var glyphs = ["WebGM/Glyphs/acid.png"]
+var glyphs = ["Glyphs/acid.png"]
 
 function displayImage(){
 	glyphA = randomPick(glyphs);
