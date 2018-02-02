@@ -24,12 +24,12 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 // Glyph
 
 var prefix = "Glyphs/"
-var glyphs = ["acid.png"]
+var glyphs = ["acid"]
 
 function displayImage(){
-	glyphA = prefix + randomPick(glyphs);
-	glyphB = prefix + randomPick(glyphs);
-	glyphC = prefix + randomPick(glyphs);
+	glyphA = prefix + randomPick(glyphs) + ".png";
+	glyphB = prefix + randomPick(glyphs) + ".png";
+	glyphC = prefix + randomPick(glyphs) + ".png";
 	document.getElementById('canvasA').src = glyphA;
 	document.getElementById('canvasB').src = glyphB;
 	document.getElementById('canvasC').src = glyphC;
