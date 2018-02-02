@@ -27,7 +27,7 @@ var prefix = "Glyphs/"
 var glyphs = ["acid.png"]
 
 function displayImage(){
-	glyphA = randomPick(prefix + glyphs);
+	glyphA = prefix + randomPick(glyphs);
 	glyphB = randomPick(glyphs);
 	glyphC = randomPick(glyphs);
 	document.getElementById('canvasA').src = glyphA;
