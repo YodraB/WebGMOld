@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>WebGM</title>
+</head>
+
+<body>
+ <textarea id="display" rows= 10 cols=50></textarea>
+ <img src="blank.jpg" id="canvasA" style="width:100px">
+ <img src="blank.jpg" id="canvasB" style="width:100px">
+ <img src="blank.jpg" id="canvasC" style="width:100px">
+ <br>
+ <button onclick="yesno()">Yes/No</button>
+ <input type="range" id="ynSlider" min="1" max="19" value="10" onchange="ynShowValue(this.value)">
+ <span id="chance">50% yes</span>
+ <button onclick="displayImage()">Glyph</button>
+ <br>
+ <button onclick="customDice()">Roll Dice</button>
+ number of dice:<input type="text" id="numDice" value="1" size="5">
+ number of sides:<input type="text" id="diceSides" value="20" size="5">
+ <button onclick="fudgefate()">F/F dice</button>
+ <br>
+ <button onclick="damage()">Damage</button>
+ <input type="range" id="damageSlider" min="0" max="10" value="1" onchange="damageShowValue(this.value)">
+ <span id="danger">danger level 1</span>
+ <br>
+ <button onclick="name()">Name</button>
+ <button onclick="character()">Character</button>
+ <button onclick="appearance()">Appearance</button>
+ <button onclick="role()">Role</button>
+ <button onclick="quirk()">Quirk</button>
+ <button onclick="friend()">Friendliness</button>
+ <br>
+ <button onclick="fPeoples()">Fantasy Peoples</button>
+ <button onclick="sPeoples()">Sci Fi Peoples</button>
+ <button onclick="creature()">Creature</button>
+ <br>
+ <button onclick="eventGen()">Event</button>
+ <button onclick="setting()">Setting</button>
+ <button onclick="genItem()">Item</button>
+ <br>
+
+
+ <!-- Credits -->
+
+<script src="indexJS.js"></script>
+
+</body>
