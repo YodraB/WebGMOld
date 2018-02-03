@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>WebGM</title>
+<script src="indexJS.js"></script>
 </head>
 
 <body>
@@ -10,9 +11,10 @@
  <img src="blank.jpg" id="canvasB" style="width:100px">
  <img src="blank.jpg" id="canvasC" style="width:100px">
  <br>
-  <button onclick="yesno()">Yes/No</button>
+ <button onclick="yesno()">Yes/No</button>
  <input type="range" id="ynSlider" min="1" max="19" value="10" onchange="ynShowValue(this.value)">
  <span id="chance">50% yes</span>
+ <button onclick="displayImage()">Glyph</button>
  <br>
  <button onclick="customDice()">Roll Dice</button>
  number of dice:<input type="text" id="numDice" value="1" size="5">
@@ -23,6 +25,7 @@
  <input type="range" id="damageSlider" min="0" max="10" value="1" onchange="damageShowValue(this.value)">
  <span id="danger">danger level 1</span>
  <br>
+ <button onclick="nameGen()">Name</button>
  <button onclick="character()">Character</button>
  <button onclick="appearance()">Appearance</button>
  <button onclick="role()">Role</button>
@@ -37,10 +40,8 @@
  <button onclick="setting()">Setting</button>
  <button onclick="genItem()">Item</button>
  <br>
-  <button onclick="displayImage()">Glyph</button>
+
 
  <!-- Credits -->
-
-<script src="indexJS.js"></script>
 
 </body>

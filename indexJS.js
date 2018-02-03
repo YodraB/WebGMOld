@@ -25,14 +25,14 @@ var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 
 
 var prefix = "Glyphs/"
 var glyphs = ['acid', 'ages', 'alien-bug', 'alien-stare', 'all-seeing-eye', 'amphora', 'android-mask', 'angel-wings', 'aquarium',  'architect-mask',  'awareness', 'barbed-coil', 'battery-pack-alt', 'beard', 'beech', 'bestial-fangs', 'big-wave', 'bindle', 'bird-mask', 'black-cat', 'black-hole-bolas', 'blindfold', 'body-swapping', 'boiling-bubbles', 'bolt-eye', 'bowen-knot', 'branch-arrow', 'breaking-chain', 'bubbling-bowl', 'bubbling-flask', 'burning-book', 'burning-meteor', 'burning-passion', 'calavera', 'card-joker', 'carnyx', 'cauldron', 'chained-heart', 'chalice-drops', 'chameleon-glyph', 'clover', 'cobweb', 'coma', 'concrete-bag', 'convince', 'coronation', 'crown-coin', 'crowned-heart', 'crowned-skull', 'crystalize', 'cultist', 'cursed-star', 'cyber-eye', 'cyborg-face', 'cycle', 'dagger-rose', 'dark-squad', 'deathcap', 'defibrilate', 'delighted', 'desert-skull', 'despair', 'direwolf', 'disintegrate', 'distraction', 'double-face-mask', 'dove', 'dozen', 'drakkar', 'dread', 'drink-me', 'dripping-star', 'ecology', 'egg-clutch', 'egyptian-pyramids', 'energy-shield', 'enlightenment', 'entangled-typhoon', 'evil-bat', 'evil-moon', 'evil-wings', 'eye-of-horus', 'eye-target', 'fangs-circle', 'fire-ace', 'fire-bottle', 'fire-dash', 'fire-silhouette', 'fishing-hook', 'fleshy-mass', 'forest', 'fox-head', 'freedom-dove', 'frontal-lobe', 'frostfire', 'fruiting', 'fuji', 'gas-mask', 'gem-chain', 'ghost-ally', 'gift-of-knowledge', 'gluttonous-smile', 'gooey-sword', 'gorilla', 'guarded-tower', 'hair-strands', 'halt', 'harpy', 'heart-bottle', 'heart-drop', 'heptagram', 'hole-ladder', 'holy-grail', 'holy-oak', 'ice-bolt', 'iceberg', 'id-card', 'ink-swirl', 'inner-self', 'invisible', 'ivory-tusks', 'juggler', 'keyring', 'knot', 'lamprey-mouth', 'life-in-the-balance', 'love-mystery', 'mad-scientist', 'magic-gate', 'marrow-drain', 'medieval-pavilion', 'minerals', 'moebius-star', 'mute', 'nothing-to-say', 'octoman', 'oily-spiral', 'one-eyed', 'ouroboros', 'overmind', 'paw-heart', 'pegasus', 'pierced-heart', 'piercing-sword', 'pirate-flag', 'pirate-grave', 'plague-doctor-profile', 'plants-and-animals', 'plesiosaurus', 'poison', 'poker-hand', 'prayer', 'processor', 'pyromaniac', 'radial-balance', 'rainbow-star', 'raise-skeleton', 'revolt', 'ringing-bell', 'river', 'roman-shield', 'rupee', 'scythe', 'secret-door', 'serrated-slash', 'shaking-hands', 'shark-fin', 'shield-echoes', 'shiny-purse', 'shouting', 'shuriken', 'sickle', 'sinking-ship', 'sinking-trap', 'skeleton-key', 'slalom', 'slashed-shield', 'sleepy', 'sly', 'smoke-bomb', 'sound-waves', 'spatter', 'spiked-armor', 'spiky-eclipse', 'spiral-arrow', 'spiral-tentacle', 'sprout', 'spy', 'star-sattelites', 'stars-stack', 'stigmata', 'stork-delivery', 'striped-sun', 'stump-regrowth', 'suits', 'sun-radiations', 'sun', 'surprised-skull', 'surrounded-eye', 'swamp', 'swan-breeze', 'swiss-army-knife', 'sword-break', 'tear-tracks', 'telepathy', 'temptation', 'tesla-coil', 'thor-fist', 'totem-head', 'totem', 'trojan-horse', 'two-shadows', 'vine-flower', 'volcano', 'voodoo-doll', 'wave-strike', 'winged-emblem', 'wingfoot', 'yin-yang']
+
 function displayImage(){
-	//glyphA = prefix + randomPick(glyphs) + ".png";
-	//glyphB = prefix + randomPick(glyphs) + ".png";
-	//glyphC = prefix + randomPick(glyphs) + ".png";
+	glyphA = prefix + randomPick(glyphs) + ".png";
+	glyphB = prefix + randomPick(glyphs) + ".png";
+	glyphC = prefix + randomPick(glyphs) + ".png";
 	document.getElementById('canvasA').src = glyphA;
 	document.getElementById('canvasB').src = glyphB;
 	document.getElementById('canvasC').src = glyphC;
-	print(glyphA + ", " + glyphB + ", " + glyphC);
 }
 
 // Y/N
@@ -89,7 +89,7 @@ function fudgefate() {
 		} else if (ffDice[i] == '-') {
 			ffTotal = ffTotal - 1;
 		}
-	} 
+	}
 	print(dieA + ', ' + dieB + ', ' + dieC + ', ' + dieD + ' total: ' + ffTotal);
 }
 
@@ -298,4 +298,42 @@ var items = ['ancient artifact', 'orb of power', 'device with many buttons', 'ke
 function genItem() {
 	var item = randomPick(items);
 	print(item);
+}
+
+// Name generator
+
+var numS = [1, 1, 1, 1, 2, 2, 2, 3, 3]
+var vowels = ['a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'ae', 'ai', 'au', 'ea', 'ee', 'ei', 'ey', 'ia', 'ie', 'io', 'oa', 'oi', 'oo', 'ou', 'oy', 'ua', 'ui']
+var consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z', 'bl', 'br', 'ch', 'dr', 'fl', 'fr', 'gh', 'gl', 'gr', 'kl', 'kr', 'pl', 'pr', 'sh', 'shr', 'sl', 'st', 'th', 'vl', 'wr']
+var finals = ['b', 'd', 'f', 'g', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'z', 'ch', 'sh', 'st', 'th']
+
+function nameGen() {
+	var syllable = [];
+	var sLength = randomPick(numS);
+	var vOrC = Math.random();
+
+	//First letter
+	if (vOrC > 0.66) { // i.e. 33% chance of vowel
+		syllable.push(randomPick(vowels));
+	} else {
+		syllable.push(randomPick(consonants));
+	}
+
+	//additional syllables
+	for (i = 0; i < sLength; i++) {
+		if (inside(syllable[syllable.length - 1], vowels) == true) { // when the last letter was a vowel   inside(syllable[syllable.length], vowels) == true
+			syllable.push(randomPick(consonants));
+		} else { // when the last letter was not a vowel
+		  syllable.push(randomPick(vowels));
+		}
+	}
+
+	//Turning result into string
+	result = ''
+	for (n = 0; n < syllable.length; n++) {
+		result = result + syllable[n];
+	}
+	result = result.replace(result.charAt(0), result.charAt(0).toUpperCase())
+	print(result);
+
 }
