@@ -302,6 +302,38 @@ function genItem() {
 
 // Name generator
 
+var numS = [1, 1, 1, 1, 2, 2, 2, 3, 3]
+var vowels = ['a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'ae', 'ai', 'au', 'ea', 'ee', 'ei', 'ey', 'ia', 'ie', 'io', 'oa', 'oi', 'oo', 'ou', 'oy', 'ua', 'ui']
+var consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z', 'bl', 'br', 'ch', 'dr', 'fl', 'fr', 'gh', 'gl', 'gr', 'kl', 'kr', 'pl', 'pr', 'sh', 'shr', 'sl', 'st', 'th', 'vl', 'wr']
+var finals = ['b', 'd', 'f', 'g', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'z', 'ch', 'sh', 'st', 'th']
+
 function nameGen() {
-	print('test');
+	var syllable = [];
+	var sLength = randomPick(numS);
+	var vOrC = Math.random();
+
+	//First letter
+	if (vOrC > 0.66) { // i.e. 33% chance of vowel
+		syllable.push(randomPick(vowels));
+	} else {
+		syllable.push(randomPick(consonants));
+	}
+
+	//additional syllables
+	for (i = 0; i < sLength; i++) {
+		if (inside(syllable[syllable.length - 1], vowels) == true) { // when the last letter was a vowel   inside(syllable[syllable.length], vowels) == true
+			syllable.push(randomPick(consonants));
+		} else { // when the last letter was not a vowel
+		  syllable.push(randomPick(vowels));
+		}
+	}
+
+	//Turning result into string
+	result = ''
+	for (n = 0; n < syllable.length; n++) {
+		result = result + syllable[n];
+	}
+	result = result.replace(result.charAt(0), result.charAt(0).toUpperCase())
+	print(result);
+
 }
