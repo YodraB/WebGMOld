@@ -334,7 +334,21 @@ function nameGen() {
 		if (inside(syllable[syllable.length - 1], vowels) == true) { // when the last letter was a vowel   inside(syllable[syllable.length], vowels) == true
 			syllable.push(randomPick(consonants));
 		} else { // when the last letter was not a vowel
-		  syllable.push(randomPick(vowels));
+			final = Math.random();
+			if (final > 0.75) {
+				syllable.push(randomPick(vowels) + randomPick(finals))
+			} else {
+				syllable.push(randomPick(vowels));
+			}
+		}
+	}
+
+	//Last final for single syllables
+	if (sLength == 1 && inside(syllable[1], vowels) == true) {
+		fFinal = Math.random();
+		if (fFinal > 0.25) {
+			print('haha')
+			syllable.push(randomPick(finals))
 		}
 	}
 
