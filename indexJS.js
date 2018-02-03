@@ -302,6 +302,6 @@ function genItem() {
 
 // Name generator
 
-function name() {
+function nameGen() {
 	print('test');
 }
