@@ -16,6 +16,16 @@ function print(str) {
  }
 }
 
+function inside(needle, haystack) {
+  var count = haystack.length;
+    for(var i = 0; i < count; i++)
+    {
+        if(haystack[i] === needle){
+					return true;
+				}
+    }
+    return false;
+}
 
 // Multiple-use variables
 
