@@ -393,6 +393,7 @@ var questItems = ['sword', 'ancient artifact', 'orb of power', 'device with many
 var questSettings = ['a burned building', 'a pit', 'a tall building', 'a beach', 'an island', 'a mountaintop', 'a relic in space', 'a bountiful kindom', 'a castle', 'a library', 'the plains', 'a sacred spot', 'a shrine', 'a sentient location', 'the savanna', 'the desert', 'the rainforest', 'the arctic', 'a temperate forest', 'an abandoned hospital', 'a museum of curiosities', 'a school', 'a church', 'a mysterious shop', 'a swanky hotel', 'a resort', 'a hunting retreat', 'a volcano', 'a den of dangerous beasts', 'stormy seas', 'river rapids', 'a waterfall', 'a cave', 'a ruined ship', 'above the clouds', 'a forbidden chamber', 'a hidden compartment', 'an ancient monument', 'mysterious ruins', 'an observation dome', 'a dungeon', 'a swamp', 'a seeming utopia', 'a crack in the wall', 'the underground', 'a bunker', 'a monestary', 'a sumptious garden', 'a mansion', 'a great estate', 'a squalid hovel', 'a conservatory', 'a lake', 'a farm', 'a secluded clearing', 'a factory', 'a prison', 'a power station', 'a sewer', 'a garbage dump', 'an apothecary', 'a sanitarium', 'a morgue', 'a cemetary', 'a brothel', 'a back alley', 'a black market', 'an abandoned building', 'a research facility', 'an ancient archive', 'a war-torn countryside', 'a canyon', 'a city', 'a domed city', 'a rift in time']
 
 var survive = ['an icy winter', 'a deadly plague', 'a bandit attack', 'a terrible storm', 'a famine', 'a war', 'a coup', ' a government collapse', 'a volcano', 'a typhoon', 'an invasion', 'a new dark age', 'an assasination attempt', 'a week with your family', 'in a web of deception', 'a trek across the desert', 'a horrific betrayal', 'an uprising', 'in endless night']
+
 // creature/monster
 
 function quest() {
@@ -409,7 +410,7 @@ function quest() {
 		case (questType == 'find and explore' || questType == 'explore' || questType == 'clear out'): // item only
 			questText = questType + ' ' + loc;
 			break;
-		case (questType == 'rescue' || questType == 'prevent the plans of' || questType == 'escort' || questType == 'spy on' || questType == 'negotiate with'): // char only
+		case (questType == 'rescue' || questType == 'escort' || questType == 'prevent the plans of' || questType == 'spy on' || questType == 'negotiate with'): // char only
 			questText = questType + ' ' + char;
 			break;
 		case ( questType == 'survive'): // obstacle only
@@ -427,6 +428,7 @@ function quest() {
 			charItem = randomPick([char, item]);
 			questText = questType + ' ' + charItem;
 			break;
+	// prevent plans, spy on, negotiate with, escape from, hunt down
 	}
 	print(questText);
 }
