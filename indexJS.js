@@ -29,6 +29,10 @@ function inside(needle, haystack) {
 
 // Multiple-use variables
 
+var ages = ['small child', 'child', 'teenager', 'young adult', 'young adult', 'adult', 'adult', 'adult', 'adult', 'middle aged', 'middle aged', 'middle aged', 'middle aged', 'old', 'old', 'ancient']
+
+var sexes = ['male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'person of unusual gender']
+
 var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 'agreeable', 'agressive', 'aimless', 'airy', 'all-loving', 'aloof', 'amoral', 'ambitous', 'angry', 'anxious', 'apathetic', 'argumentative', 'arrogant', 'artistic', 'articulate', 'aspiring', 'assertive', 'athletic', 'attractive', 'barbaric', 'benevolent', 'bewildered', 'bizarre', 'bland', 'boisterous', 'bold', 'breezy', 'brilliant', 'brutal', 'businesslike', 'busy', 'calculating', 'callous', 'calm', 'cantankerous', 'capable', 'captivating', 'careless', 'caring', 'casual', 'cautious', 'charismatic', 'charming', 'cheerful', 'childish', 'clumsy', 'competitive', 'cold', 'concilliatory', 'conceited', 'confident', 'conformist', 'confused', 'conscientious', 'considerate', 'contemplative', 'cooperative', 'courageous', 'courteous', 'cowardly', 'clever', 'crass', 'creative', 'crippled', 'crude', 'cruel', 'cultured', 'cunning', 'curious', 'cute', 'cynical', 'daring', 'debonair', 'decent', 'deceptive', 'decisive', 'dedicated', 'delicate', 'desperate', 'destructive ', 'determined', 'devious', 'dignified', 'disciplined', 'disconcerting', 'discreet', 'dishonest', 'disrespectful', 'distractible', 'disturbing', 'dogmatic', 'domineering', 'dour', 'down-to-earth', 'dramtic', 'dreamy', 'driven', 'droll', 'dull', 'dutiful', 'dynamic', 'earnest', 'earthy', 'educated', 'egocentric', 'elegant', 'emotional', 'empathetic', 'energetic', 'enigmatic', 'enthusiastic', 'erratic', 'faithful', 'fanatical', 'far-sighted', 'fatalistic', 'fearful', 'feminine', 'fickle', 'flamboyant', 'flexible', 'focused', 'foolish', 'forceful', 'forgetful', 'forgiving', 'formal', 'forthright', 'freethinking', 'friendly', 'frightening', 'frugal', 'fun-loving', 'funny', 'gallant', 'genrous', 'gentle', 'genuine', 'gloomy', 'good-natured', 'gracious', 'greedy', 'grim', 'grumpy', 'guileless', 'gullible', 'hardworking', 'haughty', 'hearty', 'helpful', 'heroic', 'hesitant', 'high-minded', 'high-spirited', 'honest', 'honorable', 'humble', 'hypnotic', 'idealistic', 'ignorant', 'imaginative', 'impatient', 'impersonable', 'imposing', 'impressionable', 'impulsive', 'incisive', 'inconsiderate', 'incorruptable', 'indecisive', 'individualistic', 'innovative', 'inoffensive', 'insane', 'insecure', 'insightful', 'insouciant', 'intelligent', 'intellectual', 'intense', 'intimidating', 'intuitive', 'irreverant', 'irritable', 'jovial', 'kind', 'knowledgeable', 'lazy', 'leaderly', 'logical', 'lonely', 'lovable', 'loyal', 'lucky', 'magnanimous', 'masculine', 'mature', 'meddlesome', 'mellow', 'messy', 'methodical', 'meticulous', 'miserable', 'miserly', 'misguided', 'modest', 'modern', 'moody', 'morbid', 'mystical', 'naive', 'narcissistic', 'narrow-minded', 'neat', 'neurotic', 'noncommittal', 'obnoxious', 'observant', 'obsessive', 'old-fashioned', 'optimistic', 'organized', 'outspoken', 'paranoid', 'parental', 'passionate', 'patient', 'patriotic', 'peaceful', 'perceptive', 'perfectionist', 'personable', 'persuasive', 'petulant', 'placid', 'playful', 'pompous', 'popular', 'practical', 'precise', 'predictable', 'preoccupied', 'prescient', 'pretentious', 'prim', 'principled', 'private', 'progressive', 'protective', 'proud', 'prudent', 'purposeful', 'quiet', 'rational', 'reflective', 'regretful', 'repentant', 'relaxed', 'reliable', 'religious', 'reserved', 'resourceful', 'respectful', 'responsible', 'restrained', 'retiring', 'rowdy', 'sadistic', 'sarcastic', 'secretive', 'self-concious', 'scrupulous', 'selfish', 'selfless', 'self-critical', 'self-denying', 'self-sufficient', 'sensitive', 'sensual', 'simple', 'skeptical', 'skilled', 'sleazy', 'sociable', 'solemn', 'somber', 'sophisticated', 'stern', 'stoic', 'strict', 'strong', 'strong-willed', 'stubborn', 'studious', 'stylish', 'suave', 'superstitious', 'suspicious', 'sympathetic', 'tidy', 'timid', 'tolerant', 'tough', 'tractable', 'trendy', 'trusting', 'twitchy', 'uncomplaining', 'unchanging',  'undemanding', 'unhurried', 'uninhibited','understanding', 'unlucky', 'vacuous', 'vindictive', 'vivacious', 'vulnerable', 'weak', 'well-bred', 'well-meaning', 'well-read', 'well-rounded', 'whimsical', 'wise', 'witty']
 
 // Glyph
@@ -131,15 +135,12 @@ function damage() {
 
 // Character Generator - age, sex, characteristic
 
-var ages = ['small child','child','teenager','young adult', 'young adult', 'adult', 'adult', 'adult', 'adult', 'middle aged', 'middle aged', 'middle aged', 'middle aged', 'old', 'old','ancient']
-
-var sexes = ['male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'female', 'neither male nor female']
-
 function character() {
 	var age = randomPick(ages);
 	var sex = randomPick(sexes);
 	var char = randomPick(characteristics);
 	print(age + ', ' + sex + ', ' + char);
+	return age, sex, char
 }
 
 
@@ -234,7 +235,7 @@ function sPeoples() {
 
 var size = ['a small house', 'an elephant', 'a bear', 'a horse', 'a horse', 'an average adult human', 'a large dog', 'a large dog', 'a child', 'a child', 'a child', 'a house cat', 'a house cat', 'a house cat', 'a mouse']
 
- var like = ['a duck', 'a cat', 'a bat', 'a dog', 'a horse', 'a deer', 'a tapir', 'an alligator', 'an octopus', 'a squid', 'a slug', 'a dragonfly', 'a sardine', 'an elephant', 'a snail', 'a turtle', 'a snake', 'a stingray', 'a kangaroo', 'a chameleon', 'a pelican', 'a worm', 'a beetle', 'a mass of spaghetti', 'a blob', 'an ape',  'an eagle', 'a weasel', 'a rat', 'a frog', 'a monkey', 'a fish', 'a scorpion', 'a starfish', 'an emu', 'a lion', 'a rhino', 'a hippo', 'a wombat', 'a kangaroo mouse', 'a platypus', 'an otter', 'a bear', 'a giraffe', 'a llama', 'a spider', 'an anenome', 'a sponge', 'a hummingbird', 'a cow', 'an antelope', 'a camel', 'a pig', 'a shark', 'a raccoon', 'a dolphin', 'a turtle', 'a crab', 'a mouse', 'a koala', 'a sloth', 'an armadillo', 'an anteater', 'a hummingbird', 'a goose', 'an owl', 'a chicken', 'a crane', 'a jellyfish', 'a mole', 'a rabbit', 'a robin', 'a lizard', 'a centaur', 'a balloon', 'a raptor']
+var like = ['a duck', 'a cat', 'a bat', 'a dog', 'a horse', 'a deer', 'a tapir', 'an alligator', 'an octopus', 'a squid', 'a slug', 'a dragonfly', 'a sardine', 'an elephant', 'a snail', 'a turtle', 'a snake', 'a stingray', 'a kangaroo', 'a chameleon', 'a pelican', 'a worm', 'a beetle', 'a mass of spaghetti', 'a blob', 'an ape',  'an eagle', 'a weasel', 'a rat', 'a frog', 'a monkey', 'a fish', 'a scorpion', 'a starfish', 'an emu', 'a lion', 'a rhino', 'a hippo', 'a wombat', 'a kangaroo mouse', 'a platypus', 'an otter', 'a bear', 'a giraffe', 'a llama', 'a spider', 'an anenome', 'a sponge', 'a hummingbird', 'a cow', 'an antelope', 'a camel', 'a pig', 'a shark', 'a raccoon', 'a dolphin', 'a turtle', 'a crab', 'a mouse', 'a koala', 'a sloth', 'an armadillo', 'an anteater', 'a hummingbird', 'a goose', 'an owl', 'a chicken', 'a crane', 'a jellyfish', 'a mole', 'a rabbit', 'a robin', 'a lizard', 'a centaur', 'a balloon', 'a raptor']
 
 var but = ['on stilts', 'inside-out', 'capable of flight', 'aquatic', 'covered in spines', 'with many more limbs', 'burrowing', 'with a horrible disease', 'standing upright', 'partially melted', 'upside-down', 'from the mind of H. R. Giger', 'really fluffy', 'gaunt and bony', 'with swelling in unsettling places', 'more dangerous', 'as designed by a young girl', 'inflatable', 'fatter, with stubby legs', 'triangular', 'built for speed', 'frilly', 'keenly intelligent', 'arboreal', 'as understood in medieval times', 'nocturnal', 'glittering with gems', 'angry', 'sad', 'stretched out', 'mixed with a dinosaur', 'plant-like', 'with a hive-mind', 'non-biological', 'insectoid', 'split down the middle', 'sort of squished', 'ethereal', 'really young', 'with the limbs bent backwards']
 
@@ -267,9 +268,9 @@ function creature() {
 		ncolorB = randomPic(color);
 	}
 	if (blanket > 0.49) {
-		text = text + ncolorA + '.';
+		text += ncolorA + '.';
 	} else {
-		text = text + ncolorA + ' ' + ndesign + ' ' + ncolorB + '.';
+		text += ncolorA + ' ' + ndesign + ' ' + ncolorB + '.';
 	}
 	print(text);
 }
@@ -295,15 +296,14 @@ function setting() {
 	var settingArray = [settingA, settingB, settingC];
 	var settingText = '';
 	for (i = 0; i < settingNum; i++) {
-		settingText = settingText + settingArray[i] + '... ';
+		settingText += settingArray[i] + '... ';
 	}
 	print(settingText);
 }
 
 // Item
 
-var items = ['ancient artifact', 'orb of power', 'device with many buttons', 'key', 'woven basket', 'other-planar scanner', 'animalistic talisman', 'vital signs monitor', 'simple case', 'hairbrush', 'cleaning implement', 'blue bucket', 'light source', 'bolt of cloth', 'cooling apparatus', 'heating apparatus', 'precious statue', 'interesting text', 'important message', 'doll', 'toy weapon', 'soft toy', 'complex puzzle', 'stylish hat', 'unusual hat', 'hat', 'drinking glass', 'sprig of a plant', 'small purse', 'pouch', 'stunning flower', 'flower', 'interesting rock', 'item of clothing', 'pair of pants', 'jumpsuit', 'robe', 'dress', 'skirt', 'pair of socks', 'book of riddles', 'filtering device', 'tight spring', 'power tool', 'implement of legend', 'box making small noises', 'official certificate', 'lucky ticket', "object d'art", 'bag of tricks', 'deck of cards', 'set of dice', 'badge with a sigil', 'old memento', 'folding fan', 'musical instrument', 'bottle of pills', 'flask of unknown liquid', 'ancient bone', 'shiny coin', 'religious artifact', 'powerful talisman', 'stylized mask', 'red sphere', 'blue sphere', 'shimmering sphere', 'pair of shoes', 'piece of jewelry', 'piece of fruit', 'piece of candy', 'rubber ball', 'piece of scrap metal', 'poweful ointment', 'small bottle of perfume', 'type of medicine', 'private journal', 'wide bangle', 'dangling earring', 'jewelled necklace', 'ring of power', 'portrait', 'moving picture', 'rocking chair', 'fainting couch', 'item of fine lace', 'curious biological remnant', 'sturdy pack', 'bag of holding', 'pair of scissors', 'pair of underwear', 'belt with pouches', 'tribal artifact', 'crystal sphere', 'small bell', 'bell', 'ugly sweater', 'expensive writing implement', 'writing implement', 'mysterious paste', 'minature world', 'exotic portal', 'warm beverage', 'spatula', 'bulky glasses', 'tacky knick-knack', 'general-purpose adhesive', 'communication device', 'extra-ordinary shield', 'cheap trinket', 'piece of rotting food', 'pile of detritus', 'wind-up automoton', 'part of a crumbling wall', 'picnic lunch', 'flying craft', 'tough rope', 'belt', 'buckle', 'painting', 'goblet', 'giant gong', 'hookah', 'piece of climbing equipment', 'apron', 'glider', 'boat', 'large basin', 'exotic plant', 'bottle of a beverage', 'light shirt', 'long pole', 'walking stick', 'piece of equipment for travelling through snow', 'green backpack', 'brown backpack', 'large bag', 'backpack', 'supply of ammunition', 'raft', 'inner tube', 'pair of sturdy waterproof shoes', 'harpoon', 'screw', 'nut', 'bolt', 'helmet', 'all-terrain vehicle', 'pair of strange glasses', 'form of hovering transportation', 'pair of working boots', 'piece of cold weather gear', 'gardening tool', 'flare', 'travel record', 'signaling device', 'first aid kit', 'package of trail rations', 'vermin repellant', 'fishing rod', 'mechanical spare part', 'fossil', 'jewelry box', 'native artifact', 'wall decoration', 'piece of traditional art', 'pillow', 'blanket', 'small animal', 'large animal', 'riding animal', 'animal', 'joke item', 'mug', 'large kite', 'special soap', 'piece of ceremonial clothing', 'vizer', 'hammer', 'crowbar', 'shovel', 'chisel', 'kit of art supplies', 'package of spices', 'fire starter', 'map', 'navigational aid', 'form of skin protection', 'jug', 'lockbox', 'distance-seeing tool', 'hankie', 'set of chimes', 'multi-function tool', 'kind of harness', 'crown', 'decorative comb', 'sleeping bag', 'portable shelter', 'magnifying glass', 'packet of biscuits', 'packet of jerky', 'vitamin supplement', 'barrel', 'decent amount of water', 'headscarf', 'pair of gloves', 'watch', 'shell', 'axe', 'spigot', 'piece of riding equipment', 'knife', 'bundle of netting', 'pipe', 'image-capturing device', 'amphora', 'time-keeping method', 'wrench', 'feather', 'intelligent item', 'ring', 'rod', 'vial of acid', 'vial of poison', 'bomb', 'mask', 'flag', 'exotic weapon', 'protective field', 'pair of handcuffs', 'ship', 'trttowel', 'pile of dust', 'seed', 'fine chain', 'heavy chain', 'lock', 'calculator', 'pair of goggles', 'grappling hook', 'ladder', 'periscope', 'umbrella', 'grooming kit', 'metal spike', 'bathtub', 'folding chair', 'hammock', 'fishing gear', 'mirror', 'bit of string', 'spool of string', 'horn', 'whistle', 'star chart', 'container of tea', 'box of chocolates', 'piece of meat', 'mysterious spore', 'dusting of sulphur', 'black powder', 'vial of solvent', 'deoderant', 'thick gel', 'intriguing lure', 'flying animal', 'carnivorous animal', 'domesticated animal', 'tranquilizer', 'wig', 'sash', 'coffin', 'small statue', 'huge statue', 'sled', 'boat', 'holy text', 'holy symbol', 'crystal', 'access card', 'energy source', 'cable', 'cortical implant', 'rift-born sphere', 'metal bucket', 'bucket', 'saber', 'scimitar', 'sword', 'pair of nunchuks', 'dagger', 'gun', 'projectile weapon', 'mace', 'maul', 'sickle', 'whip', 'cudgel', 'two-handed sword', 'shortsword', 'flail', 'crossbow', 'coil of rope', 'bit of elastic', 'set of armor']
-
+var items = ['ancient artifact', 'orb of power', 'device with many buttons', 'key', 'woven basket', 'other-planar scanner', 'animalistic talisman', 'vital signs monitor', 'simple case', 'hairbrush', 'cleaning implement', 'blue bucket', 'light source', 'bolt of cloth', 'cooling apparatus', 'heating apparatus', 'precious statue', 'interesting text', 'important message', 'doll', 'toy weapon', 'soft toy', 'complex puzzle', 'fiendish puzzle-box', 'stylish hat', 'unusual hat', 'hat', 'drinking glass', 'sprig of a plant', 'small purse', 'pouch', 'stunning flower', 'flower', 'interesting rock', 'item of clothing', 'pair of pants', 'jumpsuit', 'robe', 'dress', 'skirt', 'pair of socks', 'book of riddles', 'filtering device', 'tight spring', 'power tool', 'implement of legend', 'box making small noises', 'official certificate', 'lucky ticket', "object d'art", 'bag of tricks', 'deck of cards', 'set of dice', 'badge with a sigil', 'old memento', 'folding fan', 'musical instrument', 'bottle of pills', 'flask of unknown liquid', 'ancient bone', 'shiny coin', 'religious artifact', 'powerful talisman', 'stylized mask', 'red sphere', 'blue sphere', 'shimmering sphere', 'pair of shoes', 'piece of jewelry', 'piece of fruit', 'piece of candy', 'rubber ball', 'piece of scrap metal', 'poweful ointment', 'small bottle of perfume', 'type of medicine', 'private journal', 'wide bangle', 'dangling earring', 'jewelled necklace', 'ring of power', 'portrait', 'moving picture', 'rocking chair', 'fainting couch', 'item of fine lace', 'curious biological remnant', 'sturdy pack', 'bag of holding', 'pair of scissors', 'pair of underwear', 'belt with pouches', 'tribal artifact', 'crystal sphere', 'small bell', 'bell', 'ugly sweater', 'expensive writing implement', 'writing implement', 'mysterious paste', 'minature world', 'exotic portal', 'warm beverage', 'spatula', 'bulky glasses', 'tacky knick-knack', 'general-purpose adhesive', 'communication device', 'extra-ordinary shield', 'cheap trinket', 'piece of rotting food', 'pile of detritus', 'wind-up automoton', 'part of a crumbling wall', 'picnic lunch', 'flying craft', 'tough rope', 'belt', 'buckle', 'painting', 'goblet', 'giant gong', 'hookah', 'piece of climbing equipment', 'apron', 'glider', 'boat', 'large basin', 'exotic plant', 'bottle of a beverage', 'light shirt', 'long pole', 'walking stick', 'piece of equipment for travelling through snow', 'green backpack', 'brown backpack', 'large bag', 'backpack', 'supply of ammunition', 'raft', 'inner tube', 'pair of sturdy waterproof shoes', 'harpoon', 'screw', 'nut', 'bolt', 'helmet', 'all-terrain vehicle', 'pair of strange glasses', 'form of hovering transportation', 'pair of working boots', 'piece of cold weather gear', 'gardening tool', 'flare', 'travel record', 'signaling device', 'first aid kit', 'package of trail rations', 'vermin repellant', 'fishing rod', 'mechanical spare part', 'fossil', 'jewelry box', 'native artifact', 'wall decoration', 'piece of traditional art', 'pillow', 'blanket', 'small animal', 'large animal', 'riding animal', 'animal', 'joke item', 'mug', 'large kite', 'special soap', 'piece of ceremonial clothing', 'vizer', 'hammer', 'crowbar', 'shovel', 'chisel', 'kit of art supplies', 'package of spices', 'fire starter', 'map', 'navigational aid', 'form of skin protection', 'jug', 'lockbox', 'distance-seeing tool', 'hankie', 'set of chimes', 'multi-function tool', 'kind of harness', 'crown', 'decorative comb', 'sleeping bag', 'portable shelter', 'magnifying glass', 'packet of biscuits', 'packet of jerky', 'vitamin supplement', 'barrel', 'decent amount of water', 'headscarf', 'pair of gloves', 'watch', 'shell', 'axe', 'spigot', 'piece of riding equipment', 'knife', 'bundle of netting', 'pipe', 'image-capturing device', 'amphora', 'time-keeping method', 'wrench', 'feather', 'intelligent item', 'ring', 'rod', 'vial of acid', 'vial of poison', 'bomb', 'mask', 'flag', 'exotic weapon', 'protective field', 'pair of handcuffs', 'ship', 'trttowel', 'pile of dust', 'seed', 'fine chain', 'heavy chain', 'lock', 'calculator', 'pair of goggles', 'grappling hook', 'ladder', 'periscope', 'umbrella', 'grooming kit', 'metal spike', 'bathtub', 'folding chair', 'hammock', 'fishing gear', 'mirror', 'bit of string', 'spool of string', 'horn', 'whistle', 'star chart', 'container of tea', 'box of chocolates', 'piece of meat', 'mysterious spore', 'dusting of sulphur', 'black powder', 'vial of solvent', 'deoderant', 'thick gel', 'intriguing lure', 'flying animal', 'carnivorous animal', 'domesticated animal', 'tranquilizer', 'wig', 'sash', 'coffin', 'small statue', 'huge statue', 'sled', 'boat', 'holy text', 'holy symbol', 'crystal', 'access card', 'energy source', 'cable', 'cortical implant', 'rift-born sphere', 'metal bucket', 'bucket', 'saber', 'scimitar', 'sword', 'pair of nunchuks', 'dagger', 'gun', 'projectile weapon', 'mace', 'maul', 'sickle', 'whip', 'cudgel', 'two-handed sword', 'shortsword', 'flail', 'crossbow', 'coil of rope', 'bit of elastic', 'set of armor']
 
 function genItem() {
 	var item = randomPick(items);
@@ -355,9 +355,58 @@ function nameGen() {
 	//Turning result into string
 	result = ''
 	for (n = 0; n < syllable.length; n++) {
-		result = result + syllable[n];
+		result += syllable[n];
 	}
 	result = result.replace(result.charAt(0), result.charAt(0).toUpperCase())
 	print(result);
 
+}
+
+// Quest
+
+var questTypeList = ['return', 'retrieve', 'destroy', 'steal', 'find and explore', 'explore', 'clear out', 'rescue', 'prevent the plans of', 'escort', 'spy on', 'survive', 'escape from', 'investigate', 'discover the fate of', 'expose the secrets of', 'research', 'hunt down', 'protect', 'negotiate with']
+
+// 'put a stop to'
+
+var questItems = ['sword', 'ancient artifact', 'orb of power', 'device with many buttons', 'key', 'animalistic talisman', 'simple case', 'precious statue', 'interesting text', 'important message', 'doll', 'fiendish puzzle-box', 'sprig of a plant', 'small purse', 'pouch', 'stunning flower', 'mysterious flower', 'stone', 'item of clothing', 'book of riddles']
+
+var questSettings = ['a burned building', 'a pit', 'a tall building', 'a beach', 'an island', 'a mountaintop', 'a relic in space', 'a bountiful kindom', 'a castle', 'a library', 'the plains', 'a sacred spot', 'a shrine', 'a sentient location', 'the savanna', 'the desert', 'the rainforest', 'the arctic', 'a temperate forest', 'an abandoned hospital', 'a museum of curiosities', 'a school', 'a church', 'a mysterious shop', 'a swanky hotel', 'a resort', 'a hunting retreat', 'a volcano', 'a den of dangerous beasts', 'stormy seas', 'river rapids', 'a waterfall', 'a cave', 'a ruined ship', 'above the clouds', 'a forbidden chamber', 'a hidden compartment', 'an ancient monument', 'mysterious ruins', 'an observation dome', 'a dungeon', 'a swamp', 'a seeming utopia', 'a crack in the wall', 'the underground', 'a bunker', 'a monestary', 'a sumptious garden', 'a mansion', 'a great estate', 'a squalid hovel', 'a conservatory', 'a lake', 'a farm', 'a secluded clearing', 'a factory', 'a prison', 'a power station', 'a sewer', 'a garbage dump', 'an apothecary', 'a sanitarium', 'a morgue', 'a cemetary', 'a brothel', 'a back alley', 'a black market', 'an abandoned building', 'a research facility', 'an ancient archive', 'a war-torn countryside', 'a canyon', 'a city', 'a domed city', 'a rift in time']
+
+var survive = ['an icy winter', 'a deadly plague', 'a bandit attack', 'a terrible storm', 'a famine', 'a war', 'a coup', ' a government collapse', 'a volcano', 'a typhoon', 'an invasion', 'a new dark age', 'an assasination attempt', 'a week with your family', 'in a web of deception', 'a trek across the desert', 'a horrific betrayal', 'an uprising', 'in endless night']
+// creature/monster
+
+function quest() {
+	var questType = randomPick(questTypeList);
+	var questText = '';
+	var item = 'a/n ' + randomPick(questItems)
+	var loc = randomPick(questSettings)
+	var obstacle = randomPick(survive)
+	var char = 'a/n ' + randomPick(characteristics) + ' ' + randomPick(ages) + ' ' + randomPick(sexes)
+	switch(true) {
+		case (questType == 'return' || questType == 'retrieve' || questType == 'destroy' || questType == 'steal'): // item only quests
+			questText = questType + ' ' + item;
+			break;
+		case (questType == 'find and explore' || questType == 'explore' || questType == 'clear out'): // item only
+			questText = questType + ' ' + loc;
+			break;
+		case (questType == 'rescue' || questType == 'prevent the plans of' || questType == 'escort' || questType == 'spy on' || questType == 'negotiate with'): // char only
+			questText = questType + ' ' + char;
+			break;
+		case ( questType == 'survive'): // obstacle only
+			questText = questType + ' ' + obstacle;
+			break;
+		case (questType == 'escape from'):
+			escape = randomPick([loc, char]);
+			questText = questType + ' ' + escape;
+			break;
+		case (questType == 'investigate' || questType == 'discover the fate of' || questType == 'expose the secrets of' || questType == 'research' || questType == 'protect'):
+			anything = randomPick([item, loc, char]);
+			questText = questType + ' ' + anything;
+			break;
+		case (questType == 'hunt down'): // character or item
+			charItem = randomPick([char, item]);
+			questText = questType + ' ' + charItem;
+			break;
+	}
+	print(questText);
 }
