@@ -216,6 +216,26 @@ function fPeoples() {
 	}
 }
 
+//Fantasy Enemy Generator
+
+var typeEnemy = ['common', 'unique']
+
+var comEnemy = ['orc', 'troll', 'giant', 'drow']
+var amountEnemy = ['a horde', 'a tribe', 'an army']
+
+var uniqueEnemy = ['an ancient dragon hidden in a mountain', 'a fire-breathing dragon', 'a ruthless necromancer and their undead hordes', 'a lich with bones of black crystal']
+
+function fEnemies() {
+	eType = randomPick(typeEnemy)
+	if (eType == 'common') {
+		enemySort = randomPick(comEnemy)
+		enemyNum = randomPick(amountEnemy)
+		print (enemyNum + ' of ' + enemySort + 's')
+	} else {
+		enemy = randomPick(uniqueEnemy)
+		print(enemy)
+	}
+}
 
 // Science Fiction Peoples
 
