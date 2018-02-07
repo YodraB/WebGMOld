@@ -3,7 +3,7 @@
 WebGM is an attempt to gather together tools and random generators for the purposes of:
  1) Emulating a Game Master for solo play of "tabletop" RPGs
  2) Creative inspiration, particularly for writing or storytelling
- 3) Procedural generation of content ideas, particularly for games.
+ 3) Procedural generation of content ideas, particularly for role-playing games.
  
 While there are other attempts to create such a tool abailable on the internet, to my knowledge none are open-source, and most are maintained by a single coder. WebGM attempts to rectify this problem, allowing as many people as are interested to contribute to the development of the project, as well as allowing free use for all. It is hoped that this will result in a higher-quality program incorporating the best of what the solo rpg-playing community is capable of.
  
