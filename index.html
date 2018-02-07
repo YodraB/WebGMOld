@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>WebGM</title>
-<script src="jquery-3.3.1.js"></script>
 <script src="indexJS.js"></script>
 </head>
 
@@ -11,6 +10,8 @@
  <img src="blank.jpg" id="canvasA" style="width:100px">
  <img src="blank.jpg" id="canvasB" style="width:100px">
  <img src="blank.jpg" id="canvasC" style="width:100px">
+ <br>
+ <button onclick="toClipboard()">Copy text</button>
  <br>
  <button onclick="yesno()">Yes/No</button>
  <input type="range" id="ynSlider" min="1" max="19" value="10" onchange="ynShowValue(this.value)">
@@ -26,6 +27,7 @@
  <input type="range" id="damageSlider" min="0" max="10" value="1" onchange="damageShowValue(this.value)">
  <span id="danger">danger level 1</span>
  <br>
+ <!--Character basics:-->
  <button onclick="nameGen()">Name</button>
  <button onclick="character()">Character</button>
  <button onclick="appearance()">Appearance</button>
@@ -33,16 +35,20 @@
  <button onclick="quirk()">Quirk</button>
  <button onclick="friend()">Friendliness</button>
  <br>
- <button onclick="fPeoples()">Fantasy Peoples</button>
- <button onclick="fEnemies()">Fantasy Enemies</button>
- <button onclick="sPeoples()">Sci Fi Peoples</button>
- <button onclick="creature()">Creature</button>
- <br>
+ <!--General Generators:-->
  <button onclick="genre()">Genre(s)</button>
  <button onclick="eventGen()">Event</button>
  <button onclick="setting()">Setting</button>
  <button onclick="genItem()">Item</button>
  <button onclick="quest()">Quest</button>
  <br>
+ <!--Races and Species:-->
+ <button onclick="fPeoples()">Fantasy Peoples</button>
+ <button onclick="fEnemies()">Fantasy Enemies</button>
+ <button onclick="sPeoples()">Sci Fi Peoples</button>
+ <button onclick="creature()">Creature</button>
+ <br>
+ <br>
+ <small>Check out our <a href="https://github.com/YodraB/WebGM">GitHub Page</a> for documentation, credits, or to contribute!</small>
 
 </body>
