@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Test</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+
+function randomPick(array) {
+	var randomNumber = Math.floor(Math.random() * (array.length));
+	return array[randomNumber];
+}
+
+function print(str) {
+	document.getElementById("demo").innerHTML = str;
+}
+
+function aan(string) {
+	var firstLetter = string[0]
+	if (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u'){
+		string = 'an ' + string
+	} else {
+		string = 'a ' + string
+	}
+	return string
+}
+
+function inside(needle, haystack) {
+  var count = haystack.length;
+    for(var i = 0; i < count; i++)
+    {
+        if(haystack[i] === needle){
+					return true;
+				}
+    }
+    return false;
+}
+
+//Code starts here
+
+
+
+</script>
+
+</body>
+</html>
