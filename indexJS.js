@@ -436,25 +436,48 @@ function fPeoples() {
 
 var typeEnemy = ['common', 'unique']
 
-var comEnemy = ['orcs', 'trolls', 'giants', 'dark elves', 'giant frogs', 'golems', 'carnivorous slimes', 'elemental spirits', 'zombies', 'skeltons', 'hostile fae', 'intelligent wolves' , 'cyclopses', 'ogres', 'drakes', 'giant eagles', 'salamanders', 'succubi', 'swan maidens', 'dinosaurs', 'fae creatures', 'fungoids', 'hell hounds', 'giant spiders', 'vampires', 'werebeasts', 'wolves', 'gremlins', 'goblins', 'oozes', 'lizardfolk', 'merfolk', 'dire bears', 'spectral horses', 'ghosts', 'wendigo', 'gryphons', 'banshees', 'winged lions', "will o' the whisps", 'harpies', 'gorgons', 'brownies', 'trickster foxes', 'lamias', 'pixies', 'fell hyenas', 'minotaurs', 'giant scorpions', 'snakes', 'centaurs', 'rocs', 'crocodiles', 'diseased rats', 'kobolds', 'cultists', 'bandits', 'vagabonds', 'mercenaries', 'corrupt guards', 'theives', 'acolytes of a dark god', 'cannibals', 'slavers', 'raiders']
+var comEnemy = ['orc', 'troll', 'giant', 'dark elf', 'giant frog', 'golem', 'carnivorous slime', 'elemental spirit', 'zombie', 'skelton', 'hostile fae', 'intelligent wolf' , 'cyclops', 'ogre', 'drake', 'giant eagle', 'salamander', 'succubus', 'swan maiden', 'dinosaur', 'fae creature', 'fungoid', 'hell hound', 'giant spider', 'vampire', 'werebeast', 'wolf', 'gremlin', 'goblin', 'ooze', 'lizardfolk', 'merperson', 'dire bear', 'spectral horse', 'ghost', 'wendigo', 'gryphon', 'banshee', 'winged lion', "will o' the whisp", 'harpie', 'gorgon', 'brownie', 'trickster fox', 'lamia', 'pixie', 'fell hyena', 'minotaur', 'giant scorpion', 'snake', 'centaur', 'roc', 'crocodile', 'diseased rat', 'kobold', 'cultist', 'bandit', 'vagabond', 'mercenary', 'corrupt guard', 'theif', 'acolyte of a dark god', 'cannibal', 'slaver', 'raider']
 var amountEnemy = ['a horde', 'a group', 'an army', 'a pack', 'a small band', 'a pair', 'a family', 'an assembly', 'a fighting company', 'a platoon', 'a nest', 'a band', 'a gang', 'a small group', 'a couple']
 
 var uniqueEnemy = ['an ancient dragon hidden in a mountain', 'a fire-breathing dragon', 'a ruthless necromancer and their undead hordes', 'a lich with bones of black crystal', 'an iron collosus the size of a mountain', 'a demon king with the head of a goat', 'the demon lord Azazel', 'the demon Baphomet', 'the demon Moloch', 'a Great Wyrm from ages past', 'a dragon with an unusal breath power', 'an avenging angel driven mad my grief', 'a sea serpent with a grudge', 'a massive tunneling worm', 'a golem of diamond', 'a golem of mithril', 'a black worm large enough to swallow a man whole, and with powers of darkness', 'a toad-faced demon', 'an elemental dragon', 'a massive panther with glowing red eyes', 'a cunning sphinx', 'a wizard from a past age', 'the spirit of an old enemy', 'a water horse', 'a fearsome basilisk', 'an eldritch abomination', 'an old god, whom man should not know', 'the eldest medusa', 'a sword possesed by the spirit of its previous owner', 'what seems to be a cloak - until it starts strangling you', 'a young and beautiful witch', 'an ancient and gnarled witch', 'an incompetent but lucky wizard', 'a tall and broad minotaur', 'a trickster spirit that inhabits the area', "an orc war chief who's slain hundreds", 'a corrupted unicorn', 'a hydra with 13 heads', 'a hydra with seven heads', 'a giant wolf bearing a crown', 'a living swamp', 'a cannibal troll', 'a mad king', 'a corrupt sheriff and his cronies', 'the local king of theives', 'a skilled assasin', 'a mage specialized in summoning strange beasts', 'a master fencer with a jealous streak', 'a beggar driven to desperation', 'an angry drunk', 'a beserker astride a monstrous boar', 'an arrogant squire', 'a priest of a war-loving god', 'a protector of wild spaces', 'a mad alchemist', 'a guild enforcer']
 
 function fEnemies() {
-	eType = 'unique'
-	eTypeNum = Math.random()
+	eType = 'unique';
+	eTypeNum = Math.random();
+	pluralSwitch = false;
+	pluralNum = Math.random();
 	if (eTypeNum < 0.75){
-		eType = 'common'
+		eType = 'common';
+	}
+	if (pluralNum <= 0.5) {
+		pluralSwitch = true;
 	}
 	if (eType == 'common') {
-		enemySort = randomPick(comEnemy)
-		enemyNum = randomPick(amountEnemy)
-		print (enemyNum + ' of ' + enemySort)
+		enemySort = randomPick(comEnemy);
+		if (pluralSwitch == true) {
+			enemySort += 's'
+			enemyNum = randomPick(amountEnemy) + ' of ';
+		} else {
+			enemyNum = '';
+			enemySort = aan(enemySort)
+		}
+		enemy = enemyNum + enemySort;
 	} else {
-		enemy = randomPick(uniqueEnemy)
-		print(enemy)
+		enemy = randomPick(uniqueEnemy);
 	}
+	enemy = enemy.replace('elfs', 'elves')
+	enemy = enemy.replace('faes', 'fae')
+	enemy = enemy.replace('wolfs', 'wolves')
+	enemy = enemy.replace('cyclopss', 'cyclopses')
+	enemy = enemy.replace('succubuss', 'succubi')
+	enemy = enemy.replace('merpersons', 'merpeople')
+	enemy = enemy.replace('foxs', 'foxes')
+	enemy = enemy.replace('mercenarys', 'mercenaries')
+	enemy = enemy.replace('thiefs', 'thieves')
+	enemy = enemy.replace('acolyte of a dark gods', 'acolytes of a dark god')
+	enemy = enemy.replace('lizardfolks', 'lizardfolk')
+
+	print(enemy);
 }
 
 // Science Fiction Peoples
@@ -516,7 +539,8 @@ function creature() {
 }
 
 //Magical Effects
-var magCatList = ['abilityTo', 'control', 'transform', 'statusEffect', 'immunity', 'bodyChange', 'sensorium', 'summon', 'misc']
+//var magCatList = ['abilityTo', 'control', 'transform', 'statusEffect', 'immunity', 'bodyChange', 'sensorium', 'summon', 'misc']
+var magCatList = ['abilityTo']
 
 //durations
 var durationList = ['5 minutes', '10 minutes', '15 minutes', '20 minutes', '30 minutes', '1 hour', '3 hours', '12 hours', '24 hours', '3 days', '7 days', 'a fornight', 'a year', 'a year and a day', '7 years', 'forever', 'wildcard']
@@ -531,7 +555,7 @@ var areaTargetList = ['You', 'Your chosen target', 'Everyone in sight', 'Whateve
 var genTargetList = ['You', 'Your chosen target', 'Everyone in sight']
 
 //magCats
-var abilityToList = ['hold possesiveTarget breath indefinitely', 'phase through objects', 'turn invisble', 'fly', 'walk on water', 'speak to animals', 'mimic the magic of others', 'speak any language', 'heal injuries and disease', 'dispell curses', 'dispell magic', 'never tire', 'time travel', 'see in the dark', 'read minds', 'communicate telepathically', 'move at super-speed', 'see like an eagle', 'tell truth from lies', 'teleport within possesiveTarget sight range', 'stick to walls', 'shapeshift', 'project force fields', 'move objects with possesiveTarget mind', 'change possesiveTarget size', 'create and control illusions', 'create replicas of possesiveTargetself and merge with the replicas', 'cause things to explode', 'breathe fire', 'create water', 'create fog', 'spit poison', 'spit acid', 'generate ink from possesiveTarget fingertips', 'smell like a bloodhound', 'jump 10 feet upwards', 'astral project', 'disintigrate things upon touching them', 'heal all maladies', 'pass without a trace', 'create portals', 'escape any imprisonment', 'turn into an animal', 'change possesiveTarget age', 'disguise themTargetself perfectly', 'cough up gems', 'feel the emotions of others', 'sense danger', 'sense valuables', 'sense treachery', 'paralyse those justTarget touch']
+var abilityToList = ['hold possesiveTarget breath indefinitely', 'phase through objects', 'turn invisible', 'fly', 'walk on water', 'speak to animals', 'mimic the magic of others', 'speak any language', 'heal injuries and disease', 'dispell curses', 'dispell magic', 'never tire', 'time travel', 'see in the dark', 'read minds', 'communicate telepathically', 'move at super-speed', 'see like an eagle', 'tell truth from lies', 'teleport within possesiveTarget sight range', 'stick to walls', 'shapeshift', 'project force fields', 'move objects with possesiveTarget mind', 'change possesiveTarget size', 'create and control illusions', 'create replicas of possesiveTargetself and merge with the replicas', 'cause things to explode', 'breathe fire', 'create water', 'create fog', 'spit poison', 'spit acid', 'generate ink from possesiveTarget fingertips', 'smell like a bloodhound', 'jump 10 feet upwards', 'astral project', 'disintigrate things upon touching them', 'heal all maladies', 'pass without a trace', 'create portals', 'escape any imprisonment', 'turn into an animal', 'change possesiveTarget age', 'disguise themTargetself perfectly', 'cough up gems', 'feel the emotions of others', 'sense danger', 'sense valuables', 'sense treachery', 'paralyse those justTarget touch']
 	var abilityAbsoluteList = ['hold possesiveTarget breath indefinitely', 'never tire', 'move at super-speed', 'see like an eagle', 'cause things to explode', 'smell like a bloodhound', 'jump 10 feet upwards', 'pass without a trace', 'escape any imprisonment', 'turn into an animal', 'disguise themTargetself perfectly', 'cough up gems']
 var controlList = ['ants', 'worms', 'beetles', 'butterflies', 'dragonflies', 'eels', 'fish', 'jellyfish', 'plants', 'flowers', 'the dead', 'metal', 'ice', 'electricity', 'stone', 'magnetism', 'minds', "objects touching the controller's skin", 'bees', 'the weather', 'fire', 'shadow', 'water', 'light', 'gravity', 'air', 'earth', 'blood', 'sound', 'emotions', 'density', 'dreams', 'crystals', 'magical fields', 'magma', 'poison', 'smoke', 'sand', 'memories', 'ink', 'the senses of others', 'liquids', 'hair', 'glass', 'paper', 'cloth', 'rope', 'wood', 'velocity', 'monsters', 'money', 'disease', 'ashes', 'acid', 'demons', 'mirrors', 'friction', 'dolls', 'clouds', 'bubbles', 'the ocean', 'gold', 'momentum', 'wire', 'gemstones', 'insects', 'skin', 'candy', 'fungi', 'swords', 'weapons', 'armor', 'rubber', 'sugar', 'salt', 'explosives', 'spherical objects', 'milk', 'heat', 'ceramics', 'wax', 'silver', 'bronze', 'copper', 'aluminum', 'garbage', 'images', 'dice', 'coins', 'the spirit', 'a spectral hand']
 var immunityList = ['poison', 'paralysis', 'compulsions', 'emotional manipulation', 'forced sleep', 'exhaustion', 'fear', 'dizziness', 'nausea', 'hunger', 'silencing', 'sickness', 'being stunned', 'brainwashing', 'charm', 'petrification', 'unconciousness', 'curses', 'heat', 'cold', 'electricity', 'bug bites', 'illusions', 'alcohol', 'physical injury', 'mind-reading', 'mind control', 'magic', 'getting wet', 'disease']
@@ -629,8 +653,9 @@ function magicFX() {
 				} else {
 					effect += ' ';
 				}
+			} else {
+				effect += ' ';
 			}
-			effect += ' '
 			if (duration == 'for wildcard') {
 				duration = 'until ' + randomPick(goodWildDurations);
 			}
@@ -647,10 +672,9 @@ function magicFX() {
 			}
 			var notWell = Math.random();
 			if (notWell <= 0.3) {
-				append = ', but not very well, ';
-			} else {
-				effect += ' ';
+				append = ', but not very well,';
 			}
+			effect += ' ';
 			if (duration == 'for wildcard') {
 				duration = 'until ' + randomPick(goodWildDurations);
 			}
@@ -796,7 +820,7 @@ function magicFX() {
 			}
 		break;
 
-		//Genearal target FX
+		//General target FX
 		//summons
 		case (magCat == 'summon'):
 			effect = randomPick(summonList);
