@@ -1,6 +1,5 @@
  // JavaScript Document
 
-
 // General Functions
 
 function randomPick(array) {
@@ -45,6 +44,8 @@ var sexes = [ 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'm
 
 var characteristics = ['abrasive', 'absent-minded', 'adaptable', 'adventurous', 'agreeable', 'agressive', 'aimless', 'airy', 'all-loving', 'aloof', 'amoral', 'ambitous', 'angry', 'anxious', 'apathetic', 'argumentative', 'arrogant', 'artistic', 'articulate', 'aspiring', 'assertive', 'athletic', 'attractive', 'barbaric', 'benevolent', 'bewildered', 'bizarre', 'bland', 'boisterous', 'bold', 'breezy', 'brilliant', 'brutal', 'businesslike', 'busy', 'calculating', 'callous', 'calm', 'cantankerous', 'capable', 'captivating', 'careless', 'caring', 'casual', 'cautious', 'charismatic', 'charming', 'cheerful', 'childish', 'clumsy', 'competitive', 'cold', 'concilliatory', 'conceited', 'confident', 'conformist', 'confused', 'conscientious', 'considerate', 'contemplative', 'cooperative', 'courageous', 'courteous', 'cowardly', 'clever', 'crass', 'creative', 'crippled', 'crude', 'cruel', 'cultured', 'cunning', 'curious', 'cute', 'cynical', 'daring', 'debonair', 'decent', 'deceptive', 'decisive', 'dedicated', 'delicate', 'desperate', 'destructive ', 'determined', 'devious', 'dignified', 'disciplined', 'disconcerting', 'discreet', 'dishonest', 'disrespectful', 'distractible', 'disturbing', 'dogmatic', 'domineering', 'dour', 'down-to-earth', 'dramtic', 'dreamy', 'driven', 'droll', 'dull', 'dutiful', 'dynamic', 'earnest', 'earthy', 'educated', 'egocentric', 'elegant', 'emotional', 'empathetic', 'energetic', 'enigmatic', 'enthusiastic', 'erratic', 'faithful', 'fanatical', 'far-sighted', 'fatalistic', 'fearful', 'feminine', 'fickle', 'flamboyant', 'flexible', 'focused', 'foolish', 'forceful', 'forgetful', 'forgiving', 'formal', 'forthright', 'freethinking', 'friendly', 'frightening', 'frugal', 'fun-loving', 'funny', 'gallant', 'genrous', 'gentle', 'genuine', 'gloomy', 'good-natured', 'gracious', 'greedy', 'grim', 'grumpy', 'guileless', 'gullible', 'hardworking', 'haughty', 'hearty', 'helpful', 'heroic', 'hesitant', 'high-minded', 'high-spirited', 'honest', 'honorable', 'humble', 'hypnotic', 'idealistic', 'ignorant', 'imaginative', 'impatient', 'impersonable', 'imposing', 'impressionable', 'impulsive', 'incisive', 'inconsiderate', 'incorruptable', 'indecisive', 'individualistic', 'innovative', 'inoffensive', 'insane', 'insecure', 'insightful', 'insouciant', 'intelligent', 'intellectual', 'intense', 'intimidating', 'intuitive', 'irreverant', 'irritable', 'jovial', 'kind', 'knowledgeable', 'lazy', 'leaderly', 'logical', 'lonely', 'lovable', 'loyal', 'lucky', 'magnanimous', 'masculine', 'mature', 'meddlesome', 'mellow', 'messy', 'methodical', 'meticulous', 'miserable', 'miserly', 'misguided', 'modest', 'modern', 'moody', 'morbid', 'mystical', 'naive', 'narcissistic', 'narrow-minded', 'neat', 'neurotic', 'noncommittal', 'obnoxious', 'observant', 'obsessive', 'old-fashioned', 'optimistic', 'organized', 'outspoken', 'paranoid', 'parental', 'passionate', 'patient', 'patriotic', 'peaceful', 'perceptive', 'perfectionist', 'personable', 'persuasive', 'petulant', 'placid', 'playful', 'pompous', 'popular', 'practical', 'precise', 'predictable', 'preoccupied', 'prescient', 'pretentious', 'prim', 'principled', 'private', 'progressive', 'protective', 'proud', 'prudent', 'purposeful', 'quiet', 'rational', 'reflective', 'regretful', 'repentant', 'relaxed', 'reliable', 'religious', 'reserved', 'resourceful', 'respectful', 'responsible', 'restrained', 'retiring', 'rowdy', 'sadistic', 'sarcastic', 'secretive', 'self-concious', 'scrupulous', 'selfish', 'selfless', 'self-critical', 'self-denying', 'self-sufficient', 'sensitive', 'sensual', 'simple', 'skeptical', 'skilled', 'sleazy', 'sociable', 'solemn', 'somber', 'sophisticated', 'stern', 'stoic', 'strict', 'strong', 'strong-willed', 'stubborn', 'studious', 'stylish', 'suave', 'superstitious', 'suspicious', 'sympathetic', 'tidy', 'timid', 'tolerant', 'tough', 'tractable', 'trendy', 'trusting', 'twitchy', 'uncomplaining', 'unchanging',  'undemanding', 'unhurried', 'uninhibited','understanding', 'unlucky', 'vacuous', 'vindictive', 'vivacious', 'vulnerable', 'weak', 'well-bred', 'well-meaning', 'well-read', 'well-rounded', 'whimsical', 'wise', 'witty']
 
+var animalList = [ 'albatross', 'alligator', 'alpaca', 'ant', 'anteater', 'antelope', 'ape', 'armadillo','baboon', 'badger', 'bat', 'bear', 'beaver', 'beetle', 'buffalo', 'butterfly', 'camel', 'cat', 'chameleon', 'cheetah', 'chicken', 'chimp', 'chinchilla', 'cobra', 'cow', 'crab', 'crane', 'crow', 'deer', 'dog', 'dolphin', 'donkey', 'dragon', 'dragonfly', 'duck', 'eagle', 'eel', 'elephant', 'emu', 'falcon', 'fish', 'flamingo', 'fox', 'frog', 'giraffe', 'goat', 'goose', 'hamster', 'hedgehog', 'heron', 'hippo', 'hornet', 'horse', 'hummingbird', 'hyena', 'jackal', 'jaguar', 'jellyfish', 'kangaroo mouse', 'kangaroo', 'koala', 'lark', 'lemur', 'lion', 'lizard', 'llama', 'lobster', 'magpie', 'mole', 'mongoose', 'monkey', 'mouse', 'narwhal', 'newt', 'octopus', 'opossum', 'otter', 'owl', 'panda', 'parrot', 'pelican', 'penguin', 'pheasant', 'pig', 'platypus', 'porcupine', 'rabbit', 'raccoon', 'raptor', 'rat', 'rhino', 'sardine', 'scorpion', 'sea horse', 'sea lion', 'seal', 'shark', 'sheep', 'shrew', 'skink', 'skunk', 'sloth', 'slug', 'snail', 'snake', 'songbird', 'spider', 'squid', 'squirrel', 'starfish', 'stingray', 'swan', 'tapir', 'tiger', 'turtle', 'weasel', 'whale', 'wolf', 'wombat', 'worm', 'zebra']
+
 //Copy text to Clipboard - this function is basically copied from w3schools.com
 
 function toClipboard() {
@@ -59,20 +60,6 @@ function toClipboard() {
 
   /* Alert the copied text */
   alert("Copied all notes");
-}
-
-// Glyph
-
-var prefix = "Glyphs/"
-var glyphs = ['acid', 'ages', 'alien-bug', 'alien-stare', 'all-seeing-eye', 'amphora', 'android-mask', 'angel-wings', 'aquarium',  'architect-mask',  'awareness', 'barbed-coil', 'battery-pack-alt', 'beard', 'beech', 'bestial-fangs', 'big-wave', 'bindle', 'bird-mask', 'black-cat', 'black-hole-bolas', 'blindfold', 'body-swapping', 'boiling-bubbles', 'bolt-eye', 'bowen-knot', 'branch-arrow', 'breaking-chain', 'bubbling-bowl', 'bubbling-flask', 'burning-book', 'burning-meteor', 'burning-passion', 'calavera', 'card-joker', 'carnyx', 'cauldron', 'chained-heart', 'chalice-drops', 'chameleon-glyph', 'clover', 'cobweb', 'coma', 'concrete-bag', 'convince', 'coronation', 'crown-coin', 'crowned-heart', 'crowned-skull', 'crystalize', 'cultist', 'cursed-star', 'cyber-eye', 'cyborg-face', 'cycle', 'dagger-rose', 'dark-squad', 'deathcap', 'defibrilate', 'delighted', 'desert-skull', 'despair', 'direwolf', 'disintegrate', 'distraction', 'double-face-mask', 'dove', 'dozen', 'drakkar', 'dread', 'drink-me', 'dripping-star', 'ecology', 'egg-clutch', 'egyptian-pyramids', 'energy-shield', 'enlightenment', 'entangled-typhoon', 'evil-bat', 'evil-moon', 'evil-wings', 'eye-of-horus', 'eye-target', 'fangs-circle', 'fire-ace', 'fire-bottle', 'fire-dash', 'fire-silhouette', 'fishing-hook', 'fleshy-mass', 'forest', 'fox-head', 'freedom-dove', 'frontal-lobe', 'frostfire', 'fruiting', 'fuji', 'gas-mask', 'gem-chain', 'ghost-ally', 'gift-of-knowledge', 'gluttonous-smile', 'gooey-sword', 'gorilla', 'guarded-tower', 'hair-strands', 'halt', 'harpy', 'heart-bottle', 'heart-drop', 'heptagram', 'hole-ladder', 'holy-grail', 'holy-oak', 'ice-bolt', 'iceberg', 'id-card', 'ink-swirl', 'inner-self', 'invisible', 'ivory-tusks', 'juggler', 'keyring', 'knot', 'lamprey-mouth', 'life-in-the-balance', 'love-mystery', 'mad-scientist', 'magic-gate', 'marrow-drain', 'medieval-pavilion', 'minerals', 'moebius-star', 'mute', 'nothing-to-say', 'octoman', 'oily-spiral', 'one-eyed', 'ouroboros', 'overmind', 'paw-heart', 'pegasus', 'pierced-heart', 'piercing-sword', 'pirate-flag', 'pirate-grave', 'plague-doctor-profile', 'plants-and-animals', 'plesiosaurus', 'poison', 'poker-hand', 'prayer', 'processor', 'pyromaniac', 'radial-balance', 'rainbow-star', 'raise-skeleton', 'revolt', 'ringing-bell', 'river', 'roman-shield', 'rupee', 'scythe', 'secret-door', 'serrated-slash', 'shaking-hands', 'shark-fin', 'shield-echoes', 'shiny-purse', 'shouting', 'shuriken', 'sickle', 'sinking-ship', 'sinking-trap', 'skeleton-key', 'slalom', 'slashed-shield', 'sleepy', 'sly', 'smoke-bomb', 'sound-waves', 'spatter', 'spiked-armor', 'spiky-eclipse', 'spiral-arrow', 'spiral-tentacle', 'sprout', 'spy', 'star-sattelites', 'stars-stack', 'stigmata', 'stork-delivery', 'striped-sun', 'stump-regrowth', 'suits', 'sun-radiations', 'sun', 'surprised-skull', 'surrounded-eye', 'swamp', 'swan-breeze', 'swiss-army-knife', 'sword-break', 'tear-tracks', 'telepathy', 'temptation', 'tesla-coil', 'thor-fist', 'totem-head', 'totem', 'trojan-horse', 'two-shadows', 'vine-flower', 'volcano', 'voodoo-doll', 'wave-strike', 'winged-emblem', 'wingfoot', 'yin-yang']
-
-function displayImage(){
-	glyphA = prefix + randomPick(glyphs) + ".png";
-	glyphB = prefix + randomPick(glyphs) + ".png";
-	glyphC = prefix + randomPick(glyphs) + ".png";
-	document.getElementById('canvasA').src = glyphA;
-	document.getElementById('canvasB').src = glyphB;
-	document.getElementById('canvasC').src = glyphC;
 }
 
 // Y/N
@@ -98,6 +85,20 @@ function yesno() {
 function ynShowValue(newValue) {
 	newValue = newValue * 5;
 	document.getElementById("chance").innerHTML=newValue + '% yes';
+}
+
+// Glyph
+
+var prefix = "Glyphs/"
+var glyphs = ['acid', 'ages', 'alien-bug', 'alien-stare', 'all-seeing-eye', 'amphora', 'android-mask', 'angel-wings', 'aquarium',  'architect-mask',  'awareness', 'barbed-coil', 'battery-pack-alt', 'beard', 'beech', 'bestial-fangs', 'big-wave', 'bindle', 'bird-mask', 'black-cat', 'black-hole-bolas', 'blindfold', 'body-swapping', 'boiling-bubbles', 'bolt-eye', 'bowen-knot', 'branch-arrow', 'breaking-chain', 'bubbling-bowl', 'bubbling-flask', 'burning-book', 'burning-meteor', 'burning-passion', 'calavera', 'card-joker', 'carnyx', 'cauldron', 'chained-heart', 'chalice-drops', 'chameleon-glyph', 'clover', 'cobweb', 'coma', 'concrete-bag', 'convince', 'coronation', 'crown-coin', 'crowned-heart', 'crowned-skull', 'crystalize', 'cultist', 'cursed-star', 'cyber-eye', 'cyborg-face', 'cycle', 'dagger-rose', 'dark-squad', 'deathcap', 'defibrilate', 'delighted', 'desert-skull', 'despair', 'direwolf', 'disintegrate', 'distraction', 'double-face-mask', 'dove', 'dozen', 'drakkar', 'dread', 'drink-me', 'dripping-star', 'ecology', 'egg-clutch', 'egyptian-pyramids', 'energy-shield', 'enlightenment', 'entangled-typhoon', 'evil-bat', 'evil-moon', 'evil-wings', 'eye-of-horus', 'eye-target', 'fangs-circle', 'fire-ace', 'fire-bottle', 'fire-dash', 'fire-silhouette', 'fishing-hook', 'fleshy-mass', 'forest', 'fox-head', 'freedom-dove', 'frontal-lobe', 'frostfire', 'fruiting', 'fuji', 'gas-mask', 'gem-chain', 'ghost-ally', 'gift-of-knowledge', 'gluttonous-smile', 'gooey-sword', 'gorilla', 'guarded-tower', 'hair-strands', 'halt', 'harpy', 'heart-bottle', 'heart-drop', 'heptagram', 'hole-ladder', 'holy-grail', 'holy-oak', 'ice-bolt', 'iceberg', 'id-card', 'ink-swirl', 'inner-self', 'invisible', 'ivory-tusks', 'juggler', 'keyring', 'knot', 'lamprey-mouth', 'life-in-the-balance', 'love-mystery', 'mad-scientist', 'magic-gate', 'marrow-drain', 'medieval-pavilion', 'minerals', 'moebius-star', 'mute', 'nothing-to-say', 'octoman', 'oily-spiral', 'one-eyed', 'ouroboros', 'overmind', 'paw-heart', 'pegasus', 'pierced-heart', 'piercing-sword', 'pirate-flag', 'pirate-grave', 'plague-doctor-profile', 'plants-and-animals', 'plesiosaurus', 'poison', 'poker-hand', 'prayer', 'processor', 'pyromaniac', 'radial-balance', 'rainbow-star', 'raise-skeleton', 'revolt', 'ringing-bell', 'river', 'roman-shield', 'rupee', 'scythe', 'secret-door', 'serrated-slash', 'shaking-hands', 'shark-fin', 'shield-echoes', 'shiny-purse', 'shouting', 'shuriken', 'sickle', 'sinking-ship', 'sinking-trap', 'skeleton-key', 'slalom', 'slashed-shield', 'sleepy', 'sly', 'smoke-bomb', 'sound-waves', 'spatter', 'spiked-armor', 'spiky-eclipse', 'spiral-arrow', 'spiral-tentacle', 'sprout', 'spy', 'star-sattelites', 'stars-stack', 'stigmata', 'stork-delivery', 'striped-sun', 'stump-regrowth', 'suits', 'sun-radiations', 'sun', 'surprised-skull', 'surrounded-eye', 'swamp', 'swan-breeze', 'swiss-army-knife', 'sword-break', 'tear-tracks', 'telepathy', 'temptation', 'tesla-coil', 'thor-fist', 'totem-head', 'totem', 'trojan-horse', 'two-shadows', 'vine-flower', 'volcano', 'voodoo-doll', 'wave-strike', 'winged-emblem', 'wingfoot', 'yin-yang']
+
+function displayImage(){
+	glyphA = prefix + randomPick(glyphs) + ".png";
+	glyphB = prefix + randomPick(glyphs) + ".png";
+	glyphC = prefix + randomPick(glyphs) + ".png";
+	document.getElementById('canvasA').src = glyphA;
+	document.getElementById('canvasB').src = glyphB;
+	document.getElementById('canvasC').src = glyphC;
 }
 
 // Roll custom dice
@@ -256,15 +257,6 @@ function role() {
 	print(role);
 }
 
-// Friendliness
-
-var fof = ['worships', 'loves', 'likes', 'is friendly with', 'is neutral towards', 'isn\'t sure they like', 'dislikes', 'hates', 'truly loathes']
-
-function friend() {
-	var friendly = randomPick(fof);
-	print (friendly + " the person");
-}
-
 // Quirk
 
 var quirks = ['believe the end is near', 'know a secret', 'can juggle', 'can\'t swim', 'are afraid of the dark', 'collect something as a hobbby', 'love games and jokes', 'get lost easily',  'have unusually keen senses', 'have an unusual form of transportation', 'are afraid of heights', 'have tea every afternoon', 'have an allergy', 'have a big appetite', 'have a great sense of direction', 'don\'t understand sarcasm', 'have a distinct accent', 'give everyone nicknames', 'know a lot of weird trivia', 'like scary stories', 'are a vegetarian', 'laugh a lot', 'are overly friendly', 'have a sensitive stomach', 'are double-jointed', 'are more honest than maybe they should be', 'are extremely passionate about politics', 'carry a lucky charm with them everywhere', 'have a lovely singing voice', 'once dyed their hair an unusual color', 'can hold their breath a really long time', 'have a younger sibling', 'have a lot of siblings', 'know a lot about a particular type of animal', 'can\'t stop talking', 'fret about ethics', 'talk with their hands', 'have an annoying laugh', 'snore loudly', 'tell corny jokes', 'talk to themselves', 'whistle when bored', 'use foreign words gratuitously', 'often forget what they were saying partway through', 'twitch occasionally', 'have a nasal voice', 'speak in a breathy tone', 'have a lisp', 'are always chewing something', 'can\'t sit still', 'won\'t look you in the eye', 'are always asking for confirmation', 'speak in an old-fashioned way', 'get cold easily', 'fuss with their appearance', 'tap their chin when they\'re thinking', 'have a foul mouth', 'stutter when nervous', 'have a big nose', 'are staggeringly beautiful', 'have big ears', 'have unusually-shaped ears', 'wear noticeable earrings', 'have perfect white teeth', 'have a crooked smile', 'have facial piercings', 'wear glasses', 'wear a mask', 'have a large scar across their face', 'wear face paint', 'have a delicate face', 'have flowers in their hair', 'have an unusual hairstyle', 'blush easily', 'can jump really high', 'can hold their breath for a really long time', 'have a large tattoo', 'have six toes on their left foot',  'are surprisingly strong', 'have a prosthetic hand', 'grind their teeth in thier sleep', 'have an embarrassing scar', 'have weatherbeaten skin', 'wear loose, flowing clothing', 'wear clothing all of one color', 'wear clothing unusual for their occupation', 'wear lots of bangles and jewelry', 'wear clothing with a great many pockets', 'prefer the clothing of the opposite sex', 'are possesed', 'are cursed', 'have only two teeth', 'have a gold tooth', 'have only one leg', 'have a limp', 'have a slight hunchback', 'have trouble with back pain', 'have an animal companion', 'are fiercely loyal', 'were an illegitimate child', 'were raised in a cult', 'have an alterior motive', 'are bearing a grudge', 'have a prophecy about them', 'were born under a bad omen', 'are cold an calculating', 'are stupidly brave', 'are blessed by a god', 'have an interesting birthmark', 'come from a well-known family', 'are dangerously curious', 'were once a slave', 'are a natural diplomat', 'are incredibly lucky', 'are an orphan', 'come from a non-traditional family', 'are strangely alluring', 'are devoted to a dead god', 'are impervious to pain', 'are a bit unhinged', 'are adopted', 'are an avid reader', 'are a child of the streets', 'are a natural-born leader', 'have friends in high places', 'have friends in low places', 'never show strong emotion', 'never give up', 'have a twin', 'speak in a stilted, formal way', 'have special dietary needs', 'compulsively interrupt people while they\'re talking', 'tend to take stupid bets or dares',  'have an unlikely addiction', 'habitually wear a strange or unusual accessory', 'speak in the third person', 'speak in a monotone', 'don\'t talk much', 'are easily distracted', 'speak in metaphors', 'were artificially conceived', 'enjoy ancient languages', 'collect swearwords', 'adopt dramatic poses', 'always lean on things', 'are always slouching', 'wear strong perfume or cologne', 'smell bad', 'keep the old ways',  'prefer to rely on their instincts', 'enjoy giving gifts', 'laugh at inappropriate times', 'always have to have the latest newfangled invention', 'never talk about their past', 'are wary of publicity', 'really hate losing', 'hate "roughing it"', 'are extremely disorganized', 'follow a complex code of honor', 'have an unusual obsession', 'have an over-active libido', 'are asexual', 'have an unusual sexual preference', 'are always flirting', 'are an adrenaline junkie', 'have a morbid fascination with death and disease', 'are a bit paranoid', 'struggle with delusions', 'are well-off', 'fret about their health', 'walk with a cane', 'have a disability', 'sing soprano', 'share way too much information', 'never follow the rules']
@@ -272,6 +264,15 @@ var quirks = ['believe the end is near', 'know a secret', 'can juggle', 'can\'t 
 function quirk() {
 	var quirk = randomPick(quirks);
 	print ("they " + quirk);
+}
+
+// Friendliness
+
+var fof = ['worships', 'loves', 'likes', 'is friendly with', 'is neutral towards', 'isn\'t sure they like', 'dislikes', 'hates', 'truly loathes']
+
+function friend() {
+	var friendly = randomPick(fof);
+	print (friendly + " the person");
 }
 
 //genre generator
@@ -323,7 +324,7 @@ function setting() {
 var items = ["object d'art", 'access card', 'all-terrain vehicle', 'amphora', 'ancient artifact', 'ancient bone', 'animal', 'animalistic talisman', 'apron', 'axe', 'backpack', 'badge with a sigil', 'bag of holding', 'bag of tricks', 'ball of yarn', 'barrel', 'bathtub', 'bell', 'belt with pouches', 'belt', 'bit of elastic', 'bit of string', 'black powder', 'blanket', 'blue bucket', 'blue sphere', 'boat', 'boat', 'bolt of cloth', 'bolt', 'bomb', 'book of riddles', 'bottle', 'bottle of a beverage', 'bottle of oil', 'bottle of pills', 'box making small noises', 'box of chocolates', 'brown backpack', 'bucket', 'buckle', 'bulky glasses', 'bundle of netting', 'cable', 'calculator', 'carnivorous animal', 'cheap trinket', 'chisel', 'cleaning implement', 'coffin', 'coil of rope', 'communication device', 'complex puzzle', 'container of tea', 'cooling apparatus', 'cortical implant', 'crossbow', 'crowbar', 'crown', 'crystal sphere', 'crystal', 'cudgel', 'curious biological remnant', 'dagger', 'dangling earring', 'decent amount of water', 'deck of cards', 'decorative comb', 'deoderant', 'device with many buttons', 'distance-seeing tool', 'doll', 'domesticated animal', 'dress', 'drinking glass', 'dusting of sulphur', 'energy source', 'exotic plant', 'exotic portal', 'exotic weapon', 'expensive writing implement', 'extra-ordinary shield', 'fainting couch', 'feather', 'fiendish puzzle-box', 'filtering device', 'fine chain', 'fire starter', 'first aid kit', 'fishing gear', 'fishing rod', 'flag', 'flail', 'flare', 'flask of unknown liquid', 'flower', 'flying animal', 'flying craft', 'folding chair', 'folding fan', 'form of hovering transportation', 'form of skin protection', 'fossil', 'gardening tool', 'general-purpose adhesive', 'giant gong', 'glider', 'goblet', 'grappling hook', 'green backpack', 'grooming kit', 'gun', 'hairbrush', 'hammer', 'hammock', 'hankie', 'harpoon', 'hat', 'headscarf', 'heating apparatus', 'heavy chain', 'helmet', 'holy symbol', 'holy text', 'hookah', 'horn', 'huge statue', 'image-capturing device', 'implement of legend', 'important message', 'inner tube', 'intelligent item', 'interesting rock', 'interesting text', 'intriguing lure', 'item of clothing', 'item of fine lace', 'jar of preserves', 'jewelled necklace', 'jewelry box', 'joke item', 'jug', 'jumpsuit', 'key', 'kind of harness', 'kit of art supplies', 'knife', 'ladder', 'large animal', 'large bag', 'large basin', 'large kite', 'light shirt', 'light source', 'lock', 'lockbox', 'locket', 'long pole', 'lucky ticket', 'mace', 'magnifying glass', 'map', 'marble', 'mask', 'maul', 'mechanical spare part', 'metal bucket', 'metal spike', 'minature world', 'mirror', 'moving picture', 'mug', 'multi-function tool', 'musical instrument', 'mysterious paste', 'mysterious spore', 'native artifact', 'navigational aid', 'nut', 'official certificate', 'old memento', 'orb of power', 'other-planar scanner', 'package of spices', 'package of trail rations', 'packet of biscuits', 'packet of jerky', 'painting', 'pair of gloves', 'pair of goggles', 'pair of handcuffs', 'pair of nunchuks', 'pair of pants', 'pair of scissors', 'pair of shoes', 'pair of socks', 'pair of strange glasses', 'pair of sturdy waterproof shoes', 'pair of underwear', 'pair of working boots', 'part of a crumbling wall', 'periscope', 'picnic lunch', 'piece of candy', 'peice of chalk', 'piece of ceremonial clothing', 'piece of climbing equipment', 'piece of cold weather gear', 'piece of equipment for travelling through snow', 'piece of fruit', 'piece of jewelry', 'piece of meat', 'piece of riding equipment', 'piece of rotting food', 'piece of scrap metal', 'piece of traditional art', 'pile of detritus', 'pile of dust', 'pillow', 'pin', 'pipe', 'portable shelter', 'portrait', 'pouch', 'power tool', 'powerful ointment', 'powerful talisman', 'powerful weapon', 'precious statue', 'private journal', 'projectile weapon', 'protective field', 'raft', 'red sphere', 'religious artifact', 'riding animal', 'rift-born sphere', 'ring of power', 'ring', 'robe', 'rocking chair', 'rod', 'rubber ball', 'saber', 'sash', 'scimitar', 'screw', 'seed', 'set of armor', 'set of chimes', 'set of dice', 'shell', 'shimmering sphere', 'shiny coin', 'ship', 'shortsword', 'shovel', 'sickle', 'signaling device', 'simple case', 'skirt', 'sled', 'sleeping bag', 'small animal', 'small bell', 'small bottle of perfume', 'small purse', 'small statue', 'soft toy', 'spatula', 'special soap', 'spigot', 'spool of string', 'sprig of a plant', 'star chart', 'stunning flower', 'sturdy pack', 'stylish hat', 'stylized mask', 'supply of ammunition', 'sword', 'tacky knick-knack', 'thick gel', 'tight spring', 'time-keeping method', 'tin', 'tough rope', 'towel', 'toy weapon', 'tranquilizer', 'travel record', 'tribal artifact', 'trowel', 'two-handed sword', 'type of medicine', 'ugly sweater', 'umbrella', 'unusual hat', 'vermin repellant', 'vial of acid', 'vial of poison', 'vial of solvent', 'vital signs monitor', 'vitamin supplement', 'vizer', 'walking stick', 'wall decoration', 'warm beverage', 'watch', 'whip', 'whistle', 'wide bangle', 'wig', 'wind-up automoton', 'woven basket', 'wrench', 'writing implement']
 
 function genItem() {
-	var item = randomPick(items);
+	var item = aan(randomPick(items));
 	print(item);
 }
 
@@ -387,6 +388,26 @@ function quest() {
 	// prevent plans, spy on, negotiate with, escape from, hunt down
 	}
 	print(questText);
+}
+
+//Gen-er Generators
+
+//Color
+
+function colorGet() {
+	var R_value = Math.floor(Math.random() * (255));
+	var G_value = Math.floor(Math.random() * (255));
+	var B_value = Math.floor(Math.random() * (255));
+	var rand_color = 'rgb(' + R_value + ", " + G_value + ", " + B_value + ')'
+	document.getElementById("colorButton").style.backgroundColor = rand_color;
+	print('color: ' + rand_color)
+}
+
+//Animal
+
+function animal() {
+	var animal = aan(randomPick(animalList));
+	print(animal);
 }
 
 
@@ -454,7 +475,7 @@ function sPeoples() {
 
 var size = ['a small house', 'an elephant', 'a bear', 'a horse', 'a horse', 'an average adult human', 'a large dog', 'a large dog', 'a child', 'a child', 'a child', 'a house cat', 'a house cat', 'a house cat', 'a mouse']
 
-var like = ['a duck', 'a cat', 'a bat', 'a dog', 'a horse', 'a deer', 'a tapir', 'an alligator', 'an octopus', 'a squid', 'a slug', 'a dragonfly', 'a sardine', 'an elephant', 'a snail', 'a turtle', 'a snake', 'a stingray', 'a kangaroo', 'a chameleon', 'a pelican', 'a worm', 'a beetle', 'a mass of spaghetti', 'a blob', 'an ape',  'an eagle', 'a weasel', 'a rat', 'a frog', 'a monkey', 'a fish', 'a scorpion', 'a starfish', 'an emu', 'a lion', 'a rhino', 'a hippo', 'a wombat', 'a kangaroo mouse', 'a platypus', 'an otter', 'a bear', 'a giraffe', 'a llama', 'a spider', 'an anenome', 'a sponge', 'a hummingbird', 'a cow', 'an antelope', 'a camel', 'a pig', 'a shark', 'a raccoon', 'a dolphin', 'a turtle', 'a crab', 'a mouse', 'a koala', 'a sloth', 'an armadillo', 'an anteater', 'a hummingbird', 'a goose', 'an owl', 'a chicken', 'a crane', 'a jellyfish', 'a mole', 'a rabbit', 'a robin', 'a lizard', 'a centaur', 'a balloon', 'a raptor']
+var like = ['a duck', 'a cat', 'a bat', 'a dog', 'a horse', 'a deer', 'a tapir', 'an alligator', 'an octopus', 'a squid', 'a slug', 'a dragonfly', 'a sardine', 'an elephant', 'a snail', 'a turtle', 'a snake', 'a stingray', 'a kangaroo', 'a chameleon', 'a pelican', 'a worm', 'a beetle', 'a mass of spaghetti', 'a blob', 'an ape',  'an eagle', 'a weasel', 'a rat', 'a frog', 'a monkey', 'a fish', 'a scorpion', 'a starfish', 'an emu', 'a lion', 'a rhino', 'a hippo', 'a wombat', 'a kangaroo mouse', 'a platypus', 'an otter', 'a bear', 'a giraffe', 'a llama', 'a spider', 'an anenome', 'a sponge', 'a cow', 'an antelope', 'a camel', 'a pig', 'a shark', 'a raccoon', 'a dolphin', 'a crab', 'a mouse', 'a koala', 'a sloth', 'an armadillo', 'an anteater', 'a hummingbird', 'a goose', 'an owl', 'a chicken', 'a crane', 'a jellyfish', 'a mole', 'a rabbit', 'a robin', 'a lizard', 'a centaur', 'a balloon', 'a raptor', 'a squirrel']
 
 var but = ['on stilts', 'inside-out', 'capable of flight', 'aquatic', 'covered in spines', 'with many more limbs', 'burrowing', 'with a horrible disease', 'standing upright', 'partially melted', 'upside-down', 'from the mind of H. R. Giger', 'really fluffy', 'gaunt and bony', 'with swelling in unsettling places', 'more dangerous', 'as designed by a young girl', 'inflatable', 'fatter, with stubby legs', 'triangular', 'built for speed', 'frilly', 'keenly intelligent', 'arboreal', 'as understood in medieval times', 'nocturnal', 'glittering with gems', 'angry', 'sad', 'stretched out', 'mixed with a dinosaur', 'plant-like', 'with a hive-mind', 'non-biological', 'insectoid', 'split down the middle', 'sort of squished', 'ethereal', 'really young', 'with the limbs bent backwards']
 
@@ -494,12 +515,412 @@ function creature() {
 	print(text);
 }
 
-// Magical Effects
-//Another copy of settings for now
+//Magical Effects
+var magCatList = ['abilityTo', 'control', 'transform', 'statusEffect', 'immunity', 'bodyChange', 'sensorium', 'summon', 'misc']
 
-var effects = ['flowers sprout', 'a giant sneeze', 'invisibility', 'spiking growths from the joints', 'turned into a dog', 'a dazzling flash of light', 'fireworks', 'bony armor grows', 'the taset of the last thing eaten', 'confusion', 'a bolt of lightening', ]
+//durations
+var durationList = ['5 minutes', '10 minutes', '15 minutes', '20 minutes', '30 minutes', '1 hour', '3 hours', '12 hours', '24 hours', '3 days', '7 days', 'a fornight', 'a year', 'a year and a day', '7 years', 'forever', 'wildcard']
+var statusDurationList =['30 seconds', '2 minutes', '15 minutes', '1 hour', '3 days']
+var goodWildDurations = ['the next full moon', 'justTarget are fully submersed in water', 'justTarget commit an evil act', 'justTarget are overtaken by madness', 'a magic candle in possesiveTarget possesion goes out', 'justTarget anger someone', 'it is no longer necessary']
+var wildDurations = goodWildDurations.concat(badWildDurations)
+var badWildDurations = ['justTarget earn the love of a willing soul', 'possesiveTarget quest ends', 'justTarget slay a demon', 'justTarget are forgiven', 'justTarget pass on the transformation', 'justTarget keep a vow of silence for a year', 'justTarget cry tears of true sorrow', 'justTarget solve a riddle', 'justTarget are bathed in moonlight', 'justTarget get their revenge']
+
+//targets
+var directTargetList = ['You', 'Your chosen target']
+var areaTargetList = ['You', 'Your chosen target', 'Everyone in sight', 'Whatever is most important nearby']
+var genTargetList = ['You', 'Your chosen target', 'Everyone in sight']
+
+//magCats
+var abilityToList = ['hold possesiveTarget breath indefinitely', 'phase through objects', 'turn invisble', 'fly', 'walk on water', 'speak to animals', 'mimic the magic of others', 'speak any language', 'heal injuries and disease', 'dispell curses', 'dispell magic', 'never tire', 'time travel', 'see in the dark', 'read minds', 'communicate telepathically', 'move at super-speed', 'see like an eagle', 'tell truth from lies', 'teleport within possesiveTarget sight range', 'stick to walls', 'shapeshift', 'project force fields', 'move objects with possesiveTarget mind', 'change possesiveTarget size', 'create and control illusions', 'create replicas of possesiveTargetself and merge with the replicas', 'cause things to explode', 'breathe fire', 'create water', 'create fog', 'spit poison', 'spit acid', 'generate ink from possesiveTarget fingertips', 'smell like a bloodhound', 'jump 10 feet upwards', 'astral project', 'disintigrate things upon touching them', 'heal all maladies', 'pass without a trace', 'create portals', 'escape any imprisonment', 'turn into an animal', 'change possesiveTarget age', 'disguise themTargetself perfectly', 'cough up gems', 'feel the emotions of others', 'sense danger', 'sense valuables', 'sense treachery', 'paralyse those justTarget touch']
+	var abilityAbsoluteList = ['hold possesiveTarget breath indefinitely', 'never tire', 'move at super-speed', 'see like an eagle', 'cause things to explode', 'smell like a bloodhound', 'jump 10 feet upwards', 'pass without a trace', 'escape any imprisonment', 'turn into an animal', 'disguise themTargetself perfectly', 'cough up gems']
+var controlList = ['ants', 'worms', 'beetles', 'butterflies', 'dragonflies', 'eels', 'fish', 'jellyfish', 'plants', 'flowers', 'the dead', 'metal', 'ice', 'electricity', 'stone', 'magnetism', 'minds', "objects touching the controller's skin", 'bees', 'the weather', 'fire', 'shadow', 'water', 'light', 'gravity', 'air', 'earth', 'blood', 'sound', 'emotions', 'density', 'dreams', 'crystals', 'magical fields', 'magma', 'poison', 'smoke', 'sand', 'memories', 'ink', 'the senses of others', 'liquids', 'hair', 'glass', 'paper', 'cloth', 'rope', 'wood', 'velocity', 'monsters', 'money', 'disease', 'ashes', 'acid', 'demons', 'mirrors', 'friction', 'dolls', 'clouds', 'bubbles', 'the ocean', 'gold', 'momentum', 'wire', 'gemstones', 'insects', 'skin', 'candy', 'fungi', 'swords', 'weapons', 'armor', 'rubber', 'sugar', 'salt', 'explosives', 'spherical objects', 'milk', 'heat', 'ceramics', 'wax', 'silver', 'bronze', 'copper', 'aluminum', 'garbage', 'images', 'dice', 'coins', 'the spirit', 'a spectral hand']
+var immunityList = ['poison', 'paralysis', 'compulsions', 'emotional manipulation', 'forced sleep', 'exhaustion', 'fear', 'dizziness', 'nausea', 'hunger', 'silencing', 'sickness', 'being stunned', 'brainwashing', 'charm', 'petrification', 'unconciousness', 'curses', 'heat', 'cold', 'electricity', 'bug bites', 'illusions', 'alcohol', 'physical injury', 'mind-reading', 'mind control', 'magic', 'getting wet', 'disease']
+var bodyChangeList = ['arms turn into wings', 'body sprouts an eyeball', 'face grows a third eyeball', 'joints grow spiked protrusions', 'skin grows bony armor', 'legs turn into a fin', 'limbs become tentacles', 'head becomes that of a goat', 'left foot turns into a hoof', 'hands grow three new fingers each', 'arms disappear', 'back erupts into wings', 'ears become pointed', 'pupils become splitted', 'forehead grows horns', 'hand is replaced with a hook', 'right eye disappears', 'tongue becomes forked', 'tailbone grows into a real tail', 'head becomes that of an animal', 'eyes shoot lasers', 'neck sprouts gills', 'head grows a bony crest', 'number of arms doubles', 'fingers turn to stone', 'fingers swap hands', 'limbs turn invisible', 'hair grows out', 'upper lip grows a magnificent moustache', 'eyebrows turn orange', 'ears grow to giant sizes', 'nose lengthens', 'body is covered in fish scales', 'mouth is suddenly sewn shut', 'skin is covered in boils', 'ears emit smoke', 'skin grows fur', 'skin grows harmless lumps', 'voice disappears', 'fingers turn to cheese', 'mouth becomes a beak', 'feet swell', 'thumbs turn backwards', 'vision shows only shades of green', 'voice sounds like a bird call', 'voice lowers by wuite a bit', 'voice becomes a squeaky falsetto', 'hair changes color', 'neck grows a foot longer', 'body becomes emaciated', 'face sprouts cat whiskers', 'entire body disintegrates', 'eyes cross involuntarily', 'clothing spontaneously disintegrates']
+var statusEffectList = ['poisoned', 'paralyzed', 'blind', 'compelled to dance', 'compelled to laugh uproariously', 'happy', 'sad', 'angry', 'paranoid', 'tied up', 'confused', 'asleep', 'afraid', 'dizzy', 'hungry', 'unable to use magic', 'sick', 'nauseous', 'vomiting', 'bleeding', 'very very sick', 'stunned', 'deaf', 'in a beserker rage', 'brainwashed', 'charmed', 'petrified', 'unconscious', 'jinxed', 'an amnesiac', 'exhausted', 'feeling very calm and peaceful', 'wanted by the law', 'purple', 'blue', 'orange', 'sweaty', 'floating', 'sitting down', 'homesick', 'itchy', 'overwhelmingly charming', 'hiccuping unstopably', 'very very lucky']
+	var statusInstantList = ['poisoned', 'tied up', 'asleep', 'hungry', 'sick', 'bleeding', 'very very sick', 'in a beserker rage', 'jinxed', 'exhausted', 'sitting down', 'homesick']
+var transformList = ['a dog', 'a horse', 'a skeleton', 'a elephant', 'living metal', 'a fish', 'a pig', 'a duck', 'a dragon', 'a goldfish', 'a sheep', 'a frog', 'a raven', 'a deer', 'a swan', 'a donkey', 'a dove', 'a doll', 'stone', 'a snake', 'a beetle', 'a spider', 'water', 'vapor', 'a giant', 'a child', 'an elderly person', 'a rubber chicken',  'a slime', 'a bird', 'a sword', 'a set of armor', 'a pendant', 'a book', 'a spectral form', 'a flower', 'a monster', 'a being of flame', 'a puddle of ink', 'a crude clay golem', 'smoke', 'a sprkling crystal', 'diamond', 'paper', 'ice', 'dust', 'ashes', 'a piece of coal', 'wood', 'a leper']
+var sensoriumList = ['illusion', 'see', 'hear', 'smell', 'taste', 'feel']
+	var illusionList = ['bleed from empty eyesockets', 'be surrounded by angry bees', 'have horrifying deformities', 'be spectacularly beautiful']
+	var seeList = ['something dark out of the corner of possesiveTarget eye', 'a vision of possesiveTarget gruesome death', 'a dull red glow']
+	var hearList = ['tinkling bells', 'something skittering away behind themTargetself', 'a loud whooping noise', 'meowing']
+	var smellList = ['rotting flesh', 'a strong scent of lavender', 'fear', 'citrus']
+	var tasteList = ['sausage', 'blood', 'rotten fruit', 'chocolate', 'the color green', 'cherry pie', 'melting wax']
+	var feelList = ['the touch of spectral hands', "like justTarget can't breathe", 'a crawling sensation like a bug on possesiveTarget skin', 'a pebble in possesiveTarget mouth that cannot be removed', 'the temperature drop sharply', "the overpowering urge to lick whatever justTarget're paying attention to", 'a strong craving for possesiveTarget favorite food']
+var summonList = ['spectral weapon', 'perfect meatball sub', 'pond full of carp', 'dragon', 'five course meal', 'earth elemental', 'air elemental', 'water elemental', 'fire elemental', 'hearty sandwich']
+	//summonList = summonList.concat(animalList)
+	var summonSingleList = ['pond full of carp', 'hearty sandwich']
+	var summonCreatureList = ['dragon', 'earth elemental', 'air elemental', 'water elemental', 'fire elemental']
+	summonCreatureList = summonCreatureList.concat(animalList)
+	var summonPrefixList = ['demonic', 'dire', 'celestial']
+	var summonSuffixList = ['appears out of thin air to serve you', 'appears, and immediately attacks']
+var miscList = ['thinkSHere justTarget are a', 'attacked by', 'all corpses within a 3-meter radius come back to life', 'find startTarget irresistible', 'find startTarget repugnant', "startTarget can't help but let out a terrific sneeze", 'a pocket dimension is created', 'a burst of sunlight fills the area', 'startTarget now knowSHere the location of something justTarget were searching for', 'you now know the entire hsitory of your chosen target', 'startTarget developSHere an allergy to lies', 'startTarget developSHere an inconvenient allergy', 'a plague of locusts descends on the area', 'all traps within 3 meters glow blue', 'all curses are removed within a 3-meter radius', 'an earthquake wracks the area', 'startTarget suddenly knowSHere something useful', 'a nearby object comes to life', 'everyone in sight bursts into an eerily coordinated song-and-dance routine', 'all vegetation within 3 meters turns to stone', 'everything goes dark', 'startTarget suddenly reverseSHere their alignment', 'you shoot a fireball at your chosen target', 'you shoot lighting at your chosen target', 'you shoot a magic missle at your chosen target', 'your worst fear appears', 'startTarget experience SHere a sudden intelligence boost', 'startTarget growSHere a new limb', 'suddenly, tigers', 'the world turns 90 degrees to the left around you', 'it begins to rain', 'a burst of fireworks', 'a dazzling flash of light', 'flowers sprout in a circle around you']
+	var undeadList = ['good as new', 'zombies', 'skeletons', 'vampires', 'liches']
+	var attractList = ['animals', 'monsters', 'people justTarget findSHere attractive', 'bugs', 'bees']
+	attractList = attractList.concat(animalList)
+	var attackList = ['dirty laundry', 'orcs', 'angry bees']
+	var thinkAreList = ['teapot', 'king']
+	thinkAreList = thinkAreList.concat(animalList)
 
 function magicFX() {
-	var effectText = randomPick(effects);
-	print(effectText);
-}
+	var magCat = randomPick(magCatList);
+	var duration = randomPick(durationList);
+	var magic = 'null';
+	var append = '';
+	var effect = 'effect';
+	var targetType = 'null';
+	var pluralSwitch = false;
+
+	var directTarget = randomPick(directTargetList);
+	var areaTarget = randomPick(areaTargetList);
+	var genTarget = randomPick(genTargetList);
+	if (directTarget == 'You') {
+		directTargetType = true;
+	} else {
+		directTargetType = false;
+	}
+	switch(true) {
+		case (areaTarget == 'You'):
+			areaTargetType = 'you'
+			break;
+		case (areaTarget == 'Your chosen target' || areaTarget == 'Everyone in sight'):
+			areaTargetType = 'they'
+			break;
+		case (areaTarget == 'Whatever is most important nearby'):
+			areaTargetType = 'it'
+			break;
+	}
+	switch(true) {
+		case (genTarget == 'You'):
+			genTargetType = 'you'
+			break;
+		case (genTarget == 'Your chosen target'):
+			genTargetType = 'target'
+			break;
+		case (genTarget == 'Everyone in sight'):
+			genTargetType = 'every'
+			break;
+	}
+
+	//Takes care of durations except wildcards
+	switch(true) {
+		case (duration == 'forever'):
+			duration = 'permanently';
+			break;
+		default:
+			duration = 'for ' + duration;
+	}
+
+	switch(true) { //Magic FX types switch
+
+		//Direct target FX
+		//abilities
+		case (magCat== 'abilityTo'):
+			effect = randomPick(abilityToList);
+			targetType = 'direct';
+			if (directTargetType == true) {
+				magic = 'You gain the ability to ';
+			} else {
+				magic = 'Your chosen target gains the ability to ';
+			}
+			if (inside(effect, abilityAbsoluteList) == false) {
+				var notWell = Math.random();
+				if (notWell <= 0.3) {
+					append = ', but not very well, ';
+				} else {
+					effect += ' ';
+				}
+			}
+			effect += ' '
+			if (duration == 'for wildcard') {
+				duration = 'until ' + randomPick(goodWildDurations);
+			}
+			break;
+
+		//control
+		case (magCat == 'control'):
+			effect = randomPick(controlList);
+			targetType = 'direct'
+			if (directTargetType == true) {
+				magic = 'You can now control ';
+			} else {
+				magic = 'Your chosen target can now control ';
+			}
+			var notWell = Math.random();
+			if (notWell <= 0.3) {
+				append = ', but not very well, ';
+			} else {
+				effect += ' ';
+			}
+			if (duration == 'for wildcard') {
+				duration = 'until ' + randomPick(goodWildDurations);
+			}
+			break;
+
+		//immunity
+		case (magCat == 'immunity'):
+			effect = randomPick(immunityList) + ' ';
+			targetType = 'direct';
+			if (directTargetType == true) {
+				magic = 'You are now immune to ';
+			} else {
+				magic = 'Your chosen target is now immune to ';
+			}
+			if (duration == 'for wildcard') {
+				duration = 'until ' + randomPick(goodWildDurations);
+			}
+			break;
+
+		//body changes
+		case (magCat == 'bodyChange'):
+			effect = randomPick(bodyChangeList) + ' ';
+			targetType = 'direct';
+			if (directTargetType == true) {
+				magic = 'Your ';
+			} else {
+				magic = "Your chosen target's ";
+			}
+			if (duration == 'for wildcard') {
+					duration = 'until ' + randomPick(wildDurations);
+			}
+			break;
+
+		//status effects
+		case (magCat == 'statusEffect'):
+			effect = randomPick(statusEffectList);
+			targetType = 'direct';
+			if (directTargetType == true) {
+				magic = 'You are now ';
+			} else {
+				magic = 'Your chosen target is now ';
+			}
+			if (inside(effect, statusInstantList) == false) {
+				duration = 'for ' + randomPick(statusDurationList);
+			} else {
+				duration = ''
+			}
+			break;
+
+		//Area target FX
+		//transformations
+		case (magCat == 'transform'):
+			effect = randomPick(transformList) + ' ';
+			targetType = 'area';
+			switch(true) {
+				case (areaTarget == 'You'):
+					magic = 'You transform into ';
+					break;
+				case (areaTarget == 'Your chosen target'):
+					magic = 'Your chosen target transforms into ';
+					break;
+				case (areaTarget == 'Everyone in sight'):
+					magic = 'Everyone in sight transforms into '
+					break;
+				case (areaTarget == 'Whatever is most important nearby'):
+					magic = 'Whatever is most important nearby transforms into ';
+					break;
+			}
+			if (duration == 'for wildcard') {
+				duration = 'until ' + randomPick(wildDurations);
+			}
+			break;
+
+		//sensorium
+		case (magCat == 'sensorium'):
+			effect = randomPick(sensoriumList);
+			targetType = 'area';
+			duration = ''
+			switch(true) {
+				case (areaTarget == 'You'):
+					magic = 'You ';
+					break;
+				case (areaTarget == 'Your chosen target'):
+					magic = 'Your chosen target ';
+					break;
+				case (areaTarget == 'Everyone in sight'):
+					magic = 'Every person in sight ';
+					break;
+				case (areaTarget == 'Whatever is most important nearby'):
+					areaTargetType = 'you'
+					magic = 'You ';
+					break;
+			} //close target descriptions
+			switch(true) {
+				case (effect == 'illusion'):
+					effect = randomPick(illusionList);
+					if (areaTargetType == 'you') {
+						magic += 'appear to ';
+					} else {
+						magic += 'appears to ';
+					}
+					break;
+				case (effect == 'see'):
+					effect = randomPick(seeList);
+					if (areaTargetType == 'you') {
+						magic += 'see ';
+					} else {
+						magic += 'sees ';
+					}
+					break;
+				case (effect == 'hear'):
+					effect = randomPick(hearList);
+					if (areaTargetType == 'you') {
+						magic += 'hear ';
+					} else {
+						magic += 'hears ';
+					}
+					break;
+				case (effect == 'smell'):
+					effect = randomPick(smellList);
+					if (areaTargetType == 'you') {
+						magic += 'smell ';
+					} else {
+						magic += 'smells ';
+					}
+					break;
+				case (effect == 'taste'):
+					effect = randomPick(tasteList);
+					if (areaTargetType == 'you') {
+						magic += 'taste ';
+					} else {
+						magic += 'tastes ';
+					}
+					break;
+				case (effect == 'feel'):
+					effect = randomPick(feelList);
+					if (areaTargetType == 'you') {
+						magic += 'feel ';
+					} else {
+						magic += 'feels ';
+					}
+					break;
+			}
+		break;
+
+		//Genearal target FX
+		//summons
+		case (magCat == 'summon'):
+			effect = randomPick(summonList);
+			targetType = 'gen';
+			append = ' suddenly appears';
+			magic = '';
+			duration = '';
+			if (inside(effect, summonCreatureList) == true) {
+				var prefix = Math.random();
+				if (prefix <= 0.75 && effect.search('elemental') == -1) {
+					effect = randomPick(summonPrefixList) + ' ' + effect
+				}
+				var pluralSummon = Math.random();
+				if (pluralSummon <= 0.5 && inside(effect, summonSingleList) == false) {
+					pluralSwitch = true
+					effect = 'group of ' + effect
+				}
+				var suffix = Math.random();
+				if (suffix <= 0.5) {
+					append = ' ' + randomPick(summonSuffixList)
+				}
+			} else {
+				var pluralSummon = Math.random();
+				if (pluralSummon <= 50 && inside(effect, summonSingleList) == false) {
+					pluralSwitch = true
+					effect = 'pile of ' + effect
+				}
+			}
+			effect = aan(effect) + 'PluralTarget';
+
+			break;
+
+		//misc
+		case (magCat == 'misc'):
+			effect = randomPick(miscList);
+			targetType = 'gen';
+			magic = '';
+			switch(true) {
+				case (effect == 'all corpses within a 3-meter radius come back to life'):
+					effect += ' as ' + randomPick(undeadList)
+					break;
+				case (effect == 'find startTarget irresistible' || effect == 'find startTarget repugnant'):
+					effect = 'all ' + randomPick(attractList) + 's ' + effect + ' ' + duration
+					break;
+				case (effect == 'attacked by'):
+					effect = 'startTarget areIs suddenly ' + effect + ' ' + randomPick(attackList)
+					break;
+				case (effect == 'thinkSHere justTarget are a'):
+					effect = 'startTarget ' + effect + ' ' + randomPick(thinkAreList)
+					break;
+			}
+			duration = '';
+			break;
+
+	} //close entire magCat switch
+
+
+	// final put-together of sentence
+	magic += effect + append + duration + '.';
+
+	// replaces placeholders with target-specific words
+	switch(true) {
+		case (targetType == 'direct'):
+			if (directTargetType == true) {
+				magic = magic.replace(/justTarget/g, 'you');
+				magic = magic.replace(/possesiveTarget/g, 'your');
+			} else {
+				magic = magic.replace(/justTarget/g, 'they');
+				magic = magic.replace(/possesiveTarget/g, 'their');
+			}
+			break;
+		case (targetType == 'area'):
+			switch(true){
+				case (areaTargetType == 'you'):
+					magic = magic.replace(/justTarget/g, 'you');
+					magic = magic.replace(/themTarget/g, 'your');
+					magic = magic.replace(/possesiveTarget/g, 'your');
+					break;
+				case (areaTargetType == 'they'):
+					magic = magic.replace(/justTarget/g, 'they');
+					magic = magic.replace(/themTarget/g, 'them');
+					magic = magic.replace(/possesiveTarget/g, 'their');
+					break;
+				case (areaTargetType == 'it'):
+					magic = magic.replace(/justTarget/g, 'it');
+					magic = magic.replace(/themTarget/g, 'it');
+					magic = magic.replace(/possesiveTarget/g, 'its');
+					break;
+			}
+			break;
+		case (targetType == 'gen'):
+			switch(true){
+				case (genTargetType == 'you'):
+					magic = magic.replace(/startTarget/g, 'you');
+					magic = magic.replace(/justTarget/g, 'you');
+					magic = magic.replace(/themTarget/g, 'your');
+					magic = magic.replace(/possesiveTarget/g, 'your');
+					magic = magic.replace(/SHere/g, '');
+					break;
+				case (genTargetType == 'target'):
+					magic = magic.replace(/startTarget/g, 'your chosen target');
+					magic = magic.replace(/justTarget/g, 'they');
+					magic = magic.replace(/themTarget/g, 'them');
+					magic = magic.replace(/possesiveTarget/g, 'their');
+					magic = magic.replace(/SHere/g, 's');
+					magic = magic.replace(/areIs/g, 'is');
+					break;
+				case (genTargetType == 'every'):
+					magic = magic.replace(/startTarget/g, 'every person in sight');
+					magic = magic.replace(/justTarget/g, 'they');
+					magic = magic.replace(/themTarget/g, 'them');
+					magic = magic.replace(/possesiveTarget/g, 'their');
+					magic = magic.replace(/SHere/g, 's');
+					magic = magic.replace(/areIs/g, 'is');
+					break;
+			}
+			break;
+	} // close replacement switch
+	if (pluralSwitch == true) {
+		magic = magic.replace(/PluralTarget/g, 's')
+	} else {
+		magic = magic.replace(/PluralTarget/g, '')
+	}
+
+	magic = magic.charAt(0).toUpperCase() + magic.slice(1);
+	print(magic)
+} //close entire function
