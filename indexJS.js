@@ -108,13 +108,26 @@ function customDice(){
  var numDice = document.getElementById("numDice").value;
  var results = [];
  var diceTotal = 0;
- for (i = 0; i < numDice; i++){
-   var randomNumber = (Math.floor(Math.random() * (diceSides))) + 1;
-   diceTotal += randomNumber;
-   results += randomNumber + ", ";
- }
-
- print(results + 'total: ' + diceTotal);
+ switch(true) {
+   case (numDice <= 0):
+    print("Error - you can't roll " + numDice + " dice.")
+    break;
+  case (diceSides < 2):
+    print("Error - dice can't have " + diceSides + ' sides.')
+    break;
+   case (numDice == 1):
+    results = (Math.floor(Math.random() * (diceSides))) + 1;
+    print(results);
+    break;
+  default:
+    for (i = 0; i < numDice; i++){
+      var randomNumber = (Math.floor(Math.random() * (diceSides))) + 1;
+      diceTotal += randomNumber;
+      results += randomNumber + ", ";
+    }
+    print(results + 'total: ' + diceTotal);
+    break;
+  }
 }
 
 // Fudge/Fate dice
@@ -436,7 +449,7 @@ function fPeoples() {
 
 var typeEnemy = ['common', 'unique']
 
-var comEnemy = ['orc', 'troll', 'giant', 'dark elf', 'giant frog', 'golem', 'carnivorous slime', 'elemental spirit', 'zombie', 'skelton', 'hostile fae', 'intelligent wolf' , 'cyclops', 'ogre', 'drake', 'giant eagle', 'salamander', 'succubus', 'swan maiden', 'dinosaur', 'fae creature', 'fungoid', 'hell hound', 'giant spider', 'vampire', 'werebeast', 'wolf', 'gremlin', 'goblin', 'ooze', 'lizardfolk', 'merperson', 'dire bear', 'spectral horse', 'ghost', 'wendigo', 'gryphon', 'banshee', 'winged lion', "will o' the whisp", 'harpie', 'gorgon', 'brownie', 'trickster fox', 'lamia', 'pixie', 'fell hyena', 'minotaur', 'giant scorpion', 'snake', 'centaur', 'roc', 'crocodile', 'diseased rat', 'kobold', 'cultist', 'bandit', 'vagabond', 'mercenary', 'corrupt guard', 'theif', 'acolyte of a dark god', 'cannibal', 'slaver', 'raider']
+var comEnemy = ['orc', 'troll', 'giant', 'dark elf', 'giant frog', 'golem', 'carnivorous slime', 'elemental spirit', 'zombie', 'skelton', 'hostile fae', 'intelligent wolf' , 'cyclops', 'ogre', 'drake', 'giant eagle', 'salamander', 'succubus', 'swan maiden', 'dinosaur', 'fae creature', 'fungoid', 'hell hound', 'giant spider', 'vampire', 'werebeast', 'wolf', 'gremlin', 'goblin', 'ooze', 'lizardfolk', 'merperson', 'dire bear', 'spectral horse', 'ghost', 'wendigo', 'gryphon', 'banshee', 'winged lion', "will o' the whisp", 'harpie', 'gorgon', 'brownie', 'trickster fox', 'lamia', 'pixie', 'fell hyena', 'minotaur', 'giant scorpion', 'snake', 'centaur', 'roc', 'crocodile', 'diseased rat', 'kobold', 'cultist', 'bandit', 'vagabond', 'mercenary', 'corrupt guard', 'theif', 'acolyte of a dark god', 'cannibal', 'slaver', 'raider', 'imp']
 var amountEnemy = ['a horde', 'a group', 'an army', 'a pack', 'a small band', 'a pair', 'a family', 'an assembly', 'a fighting company', 'a platoon', 'a nest', 'a band', 'a gang', 'a small group', 'a couple']
 
 var uniqueEnemy = ['an ancient dragon hidden in a mountain', 'a fire-breathing dragon', 'a ruthless necromancer and their undead hordes', 'a lich with bones of black crystal', 'an iron collosus the size of a mountain', 'a demon king with the head of a goat', 'the demon lord Azazel', 'the demon Baphomet', 'the demon Moloch', 'a Great Wyrm from ages past', 'a dragon with an unusal breath power', 'an avenging angel driven mad my grief', 'a sea serpent with a grudge', 'a massive tunneling worm', 'a golem of diamond', 'a golem of mithril', 'a black worm large enough to swallow a man whole, and with powers of darkness', 'a toad-faced demon', 'an elemental dragon', 'a massive panther with glowing red eyes', 'a cunning sphinx', 'a wizard from a past age', 'the spirit of an old enemy', 'a water horse', 'a fearsome basilisk', 'an eldritch abomination', 'an old god, whom man should not know', 'the eldest medusa', 'a sword possesed by the spirit of its previous owner', 'what seems to be a cloak - until it starts strangling you', 'a young and beautiful witch', 'an ancient and gnarled witch', 'an incompetent but lucky wizard', 'a tall and broad minotaur', 'a trickster spirit that inhabits the area', "an orc war chief who's slain hundreds", 'a corrupted unicorn', 'a hydra with 13 heads', 'a hydra with seven heads', 'a giant wolf bearing a crown', 'a living swamp', 'a cannibal troll', 'a mad king', 'a corrupt sheriff and his cronies', 'the local king of theives', 'a skilled assasin', 'a mage specialized in summoning strange beasts', 'a master fencer with a jealous streak', 'a beggar driven to desperation', 'an angry drunk', 'a beserker astride a monstrous boar', 'an arrogant squire', 'a priest of a war-loving god', 'a protector of wild spaces', 'a mad alchemist', 'a guild enforcer']
@@ -546,8 +559,8 @@ var magCatList = ['abilityTo', 'control', 'transform', 'statusEffect', 'immunity
 var durationList = ['5 minutes', '10 minutes', '15 minutes', '20 minutes', '30 minutes', '1 hour', '3 hours', '12 hours', '24 hours', '3 days', '7 days', 'a fornight', 'a year', 'a year and a day', '7 years', 'forever', 'wildcard']
 var statusDurationList =['30 seconds', '2 minutes', '15 minutes', '1 hour', '3 days']
 var goodWildDurations = ['the next full moon', 'justTarget are fully submersed in water', 'justTarget commit an evil act', 'justTarget are overtaken by madness', 'a magic candle in possesiveTarget possesion goes out', 'justTarget anger someone', 'it is no longer necessary']
-var wildDurations = goodWildDurations.concat(badWildDurations)
 var badWildDurations = ['justTarget earn the love of a willing soul', 'possesiveTarget quest ends', 'justTarget slay a demon', 'justTarget are forgiven', 'justTarget pass on the transformation', 'justTarget keep a vow of silence for a year', 'justTarget cry tears of true sorrow', 'justTarget solve a riddle', 'justTarget are bathed in moonlight', 'justTarget get their revenge']
+var wildDurations = goodWildDurations.concat(badWildDurations)
 
 //targets
 var directTargetList = ['you', 'your chosen target']
@@ -555,8 +568,8 @@ var areaTargetList = ['you', 'your chosen target', 'everyone in sight', 'whateve
 var genTargetList = ['you', 'your chosen target', 'everyone in sight']
 
 //magCats
-var abilityToList = ['hold possesiveTarget breath indefinitely', 'phase through objects', 'turn invisible', 'fly', 'walk on water', 'speak to animals', 'mimic the magic of others', 'speak any language', 'heal injuries and disease', 'dispell curses', 'dispell magic', 'never tire', 'time travel', 'see in the dark', 'read minds', 'communicate telepathically', 'move at super-speed', 'see like an eagle', 'tell truth from lies', 'teleport within possesiveTarget sight range', 'stick to walls', 'shapeshift', 'project force fields', 'move objects with possesiveTarget mind', 'change possesiveTarget size', 'create and control illusions', 'create replicas of possesiveTargetself and merge with the replicas', 'cause things to explode', 'breathe fire', 'create water', 'create fog', 'spit poison', 'spit acid', 'generate ink from possesiveTarget fingertips', 'smell like a bloodhound', 'jump 10 feet upwards', 'astral project', 'disintigrate things upon touching them', 'heal all maladies', 'pass without a trace', 'create portals', 'escape any imprisonment', 'turn into an animal', 'change possesiveTarget age', 'disguise themTargetself perfectly', 'cough up gems', 'feel the emotions of others', 'sense danger', 'sense valuables', 'sense treachery', 'paralyse those justTarget touch', 'see souls', 'hear the dead']
- var abilityAbsoluteList = ['hold possesiveTarget breath indefinitely', 'never tire', 'move at super-speed', 'see like an eagle', 'cause things to explode', 'smell like a bloodhound', 'jump 10 feet upwards', 'pass without a trace', 'escape any imprisonment', 'turn into an animal', 'disguise themTargetself perfectly', 'cough up gems', 'paralyse those justTarget touch']
+var abilityToList = ['hold possesiveTarget breath indefinitely', 'phase through objects', 'turn invisible', 'fly', 'walk on water', 'speak to animals', 'mimic the magic of others', 'speak any language', 'heal injuries and disease', 'dispell curses', 'dispell magic', 'never tire', 'time travel', 'see in the dark', 'read minds', 'communicate telepathically', 'move at super-speed', 'see like an eagle', 'tell truth from lies', 'teleport within possesiveTarget sight range', 'stick to walls', 'shapeshift', 'project force fields', 'move objects with possesiveTarget mind', 'change possesiveTarget size', 'create and control illusions', 'create replicas of possesiveTargetself and merge with the replicas', 'cause things to explode', 'breathe fire', 'create water', 'create fog', 'spit poison', 'spit acid', 'generate ink from possesiveTarget fingertips', 'smell like a bloodhound', 'jump 10 feet upwards', 'astral project', 'disintigrate things upon touching them', 'heal all maladies', 'pass without a trace', 'create portals', 'escape any imprisonment', 'turn into an animal', 'change possesiveTarget age', 'disguise themTargetself perfectly', 'cough up gems', 'feel the emotions of others', 'sense danger', 'sense valuables', 'sense treachery', 'paralyse those justTarget touch', 'see souls', 'hear the dead', 'travel through shadows', 'enter the mirror realm']
+ var abilityAbsoluteList = ['hold possesiveTarget breath indefinitely', 'never tire', 'move at super-speed', 'see like an eagle', 'cause things to explode', 'smell like a bloodhound', 'jump 10 feet upwards', 'pass without a trace', 'escape any imprisonment', 'turn into an animal', 'disguise themTargetself perfectly', 'cough up gems', 'paralyse those justTarget touch', 'enter the mirror realm']
 var controlList = ['ants', 'worms', 'beetles', 'butterflies', 'dragonflies', 'eels', 'fish', 'jellyfish', 'plants', 'flowers', 'the dead', 'metal', 'ice', 'electricity', 'stone', 'magnetism', 'minds', "objects touching the controller's skin", 'bees', 'the weather', 'fire', 'shadow', 'water', 'light', 'gravity', 'air', 'earth', 'blood', 'sound', 'emotions', 'density', 'dreams', 'crystals', 'magical fields', 'magma', 'poison', 'smoke', 'sand', 'memories', 'ink', 'the senses of others', 'liquids', 'hair', 'glass', 'paper', 'cloth', 'rope', 'wood', 'velocity', 'monsters', 'money', 'disease', 'ashes', 'acid', 'demons', 'mirrors', 'friction', 'dolls', 'clouds', 'bubbles', 'the ocean', 'gold', 'momentum', 'wire', 'gemstones', 'insects', 'skin', 'candy', 'fungi', 'swords', 'weapons', 'armor', 'rubber', 'sugar', 'salt', 'explosives', 'spherical objects', 'milk', 'heat', 'ceramics', 'wax', 'silver', 'bronze', 'copper', 'aluminum', 'garbage', 'images', 'dice', 'coins', 'the spirit', 'a spectral hand']
 var immunityList = ['poison', 'paralysis', 'compulsions', 'emotional manipulation', 'forced sleep', 'exhaustion', 'fear', 'dizziness', 'nausea', 'hunger', 'silencing', 'sickness', 'being stunned', 'brainwashing', 'charm', 'petrification', 'unconciousness', 'curses', 'heat', 'cold', 'electricity', 'bug bites', 'illusions', 'alcohol', 'physical injury', 'mind-reading', 'mind control', 'magic', 'getting wet', 'disease']
 var bodyChangeList = ['arms turn into wings', 'body sprouts an eyeball', 'face grows a third eyeball', 'joints grow spiked protrusions', 'skin grows bony armor', 'legs turn into a fin', 'limbs become tentacles', 'head becomes that of a goat', 'left foot turns into a hoof', 'hands grow three new fingers each', 'arms disappear', 'back erupts into wings', 'ears become pointed', 'pupils become splitted', 'forehead grows horns', 'hand is replaced with a hook', 'right eye disappears', 'tongue becomes forked', 'tailbone grows into a real tail', 'head becomes that of an animal', 'eyes shoot lasers', 'neck sprouts gills', 'head grows a bony crest', 'number of arms doubles', 'fingers turn to stone', 'fingers swap hands', 'limbs turn invisible', 'hair grows out', 'upper lip grows a magnificent moustache', 'eyebrows turn orange', 'ears grow to giant sizes', 'nose lengthens', 'body is covered in fish scales', 'mouth is suddenly sewn shut', 'skin is covered in boils', 'ears emit smoke', 'skin grows fur', 'skin grows harmless lumps', 'voice disappears', 'fingers turn to cheese', 'mouth becomes a beak', 'feet swell', 'thumbs turn backwards', 'vision shows only shades of green', 'voice sounds like a bird call', 'voice lowers by wuite a bit', 'voice becomes a squeaky falsetto', 'hair changes color', 'neck grows a foot longer', 'body becomes emaciated', 'face sprouts cat whiskers', 'entire body disintegrates', 'eyes cross involuntarily', 'clothing spontaneously disintegrates']
@@ -566,18 +579,18 @@ var transformList = ['a dog', 'a horse', 'a skeleton', 'a elephant', 'living met
 var sensoriumList = ['illusion', 'see', 'hear', 'smell', 'taste', 'feel']
  var illusionList = ['bleed from empty eyesockets', 'be surrounded by angry bees', 'have horrifying deformities', 'be spectacularly beautiful', 'be blessed by a god', 'be made of cloth', 'attack', 'take on a demonic appearance', 'be greviously injured', 'ooze from the pores', 'float several inches above the ground', 'have no shadow', 'be a tasty piece of food', 'be sleepwalking', 'be inside-out', 'be wearing a ludicrous hat', 'be wearing a fancy ballgown', 'have been replaced with a porcelain doll', 'have no face', 'be wrapped in bandages', 'be glowing brightly']
  var seeList = ['something dark out of the corner of possesiveTarget eye', 'a vision of possesiveTarget gruesome death', 'a dull red glow', 'the promised land', 'a procession of the fae court', 'a pink elephant', 'a castle in the sky', 'a familiar toy from possesiveTarget childhood', 'flowers instead of weapons', 'the sprits of the dead']
- var hearList = ['tinkling bells', 'something skittering away behind themTargetself', 'a loud whooping noise', 'meowing', 'all speech as gibberish', 'ominous drums in the distance', 'a train whistle', 'screaming', 'a low hissing noise', 'someone singing out of tune', 'a hideous screetching noise']
- var smellList = ['rotting flesh', 'a strong scent of lavender', 'fear', 'citrus', 'the sharp scent of peppermint', 'a slight scent of almonds', 'fresh strawberries', 'dirty socks', 'cooking meat']
- var tasteList = ['sausage', 'blood', 'rotten fruit', 'chocolate', 'the color green', 'cherry pie', 'melting wax', 'pineapple juice', 'salt', 'copper', 'peanut butter', 'cinnamon']
+ var hearList = ['tinkling bells', 'something skittering away behind themTargetself', 'a loud whooping noise', 'meowing', 'all speech as gibberish', 'ominous drums in the distance', 'a train whistle', 'screaming', 'a low hissing noise', 'someone singing out of tune', 'a hideous screetching noise', 'running water', 'paper rustling', 'an angelic choir', 'everything go completely silent', 'pealing laughter', 'a low snickering']
+ var smellList = ['rotting flesh', 'a strong scent of lavender', 'fear', 'citrus', 'the sharp scent of peppermint', 'a slight scent of almonds', 'fresh strawberries', 'dirty socks', 'cooking meat', 'vanilla', 'baking cookies', 'burning', 'ozone', 'something sickeningly sweet', 'wet earth', 'mothballs', 'ink and old paper', 'motor oil']
+ var tasteList = ['sausage', 'blood', 'rotten fruit', 'chocolate', 'the color green', 'cherry pie', 'melting wax', 'pineapple juice', 'salt', 'copper', 'peanut butter', 'cinnamon', "possesiveTarget mother's home cooking", 'blueberries', 'lemonade', 'mint', 'ashes', 'seawater', 'pomegranite', 'rust', 'soap']
  var feelList = ['the touch of spectral hands', "like justTarget can't breathe", 'a crawling sensation like a bug on possesiveTarget skin', 'a pebble in possesiveTarget mouth that cannot be removed', 'the temperature drop sharply', "the overpowering urge to lick whatever justTarget're paying attention to", 'a strong craving for possesiveTarget favorite food', 'something trying to escape from possesiveTarget stomach', 'possesiveTarget body burning', 'possesiveTarget skin bubbling']
-var summonList = ['spectral weapon', 'perfect meatball sub', 'pond full of carp', 'dragon', 'five course meal', 'earth elemental', 'air elemental', 'water elemental', 'fire elemental', 'hearty sandwich']
+var summonList = ['spectral weapon', 'perfect meatball sub', 'pond full of carp', 'dragon', 'five course meal', 'earth elemental', 'air elemental', 'water elemental', 'fire elemental', 'hearty sandwich', 'flying machine', 'rubber chicken']
  summonList = summonList.concat(animalList)
- var summonSingleList = ['pond full of carp', 'hearty sandwich']
+ var summonSingleList = ['pond full of carp', 'hearty sandwich', 'flying machine']
  var summonCreatureList = ['dragon', 'earth elemental', 'air elemental', 'water elemental', 'fire elemental']
  summonCreatureList = summonCreatureList.concat(animalList)
- var summonPrefixList = ['demonic', 'dire', 'celestial']
+ var summonPrefixList = ['demonic', 'dire', 'celestial', 'giant', 'albino']
  var summonSuffixList = ['appears out of thin air to serve you', 'appears, and immediately attacks']
-var miscList = ['thinkSHere justTarget are a', 'attacked by', 'all corpses within a 3-meter radius come back to life', 'find startTarget irresistible', 'find startTarget repugnant', "startTarget can't help but let out a terrific sneeze", 'a pocket dimension is created', 'a burst of sunlight fills the area', 'startTarget now knowSHere the location of something justTarget were searching for', 'you now know the entire hsitory of your chosen target', 'startTarget developSHere an allergy to lies', 'startTarget developSHere an inconvenient allergy', 'a plague of locusts descends on the area', 'all traps within 3 meters glow blue', 'all curses are removed within a 3-meter radius', 'an earthquake wracks the area', 'startTarget suddenly knowSHere something useful', 'a nearby object comes to life', 'everyone in sight bursts into an eerily coordinated song-and-dance routine', 'all vegetation within 3 meters turns to stone', 'everything goes dark', 'startTarget suddenly reverseSHere their alignment', 'you shoot a fireball at your chosen target', 'you shoot lighting at your chosen target', 'you shoot a magic missle at your chosen target', 'your worst fear appears', 'startTarget experience SHere a sudden intelligence boost', 'startTarget growSHere a new limb', 'suddenly, tigers', 'the world turns 90 degrees to the left around you', 'it begins to rain', 'a burst of fireworks', 'a dazzling flash of light', 'flowers sprout in a circle around you']
+var miscList = ['thinkSHere justTarget are a', 'attacked by', 'all corpses within a 3-meter radius come back to life', 'find startTarget irresistible', 'find startTarget repugnant', "startTarget can't help but let out a terrific sneeze", 'a pocket dimension is created', 'a burst of sunlight fills the area', 'startTarget now knowSHere the location of something justTarget were searching for', 'you now know the entire hsitory of your chosen target', 'startTarget developSHere an allergy to lies', 'startTarget developSHere an inconvenient allergy', 'a plague of locusts descends on the area', 'all traps within 3 meters glow blue', 'all curses are removed within a 3-meter radius', 'an earthquake wracks the area', 'startTarget suddenly knowSHere something useful', 'a nearby object comes to life', 'everyone in sight bursts into an eerily coordinated song-and-dance routine', 'all vegetation within 3 meters turns to stone', 'everything goes dark', 'startTarget suddenly reverseSHere their alignment', 'you shoot a fireball at your chosen target', 'you shoot lighting at your chosen target', 'you shoot a magic missle at your chosen target', 'your worst fear appears', 'startTarget experience SHere a sudden intelligence boost', 'startTarget growSHere a new limb', 'suddenly, tigers', 'the world turns 90 degrees to the left around you', 'it begins to rain', 'a burst of fireworks', 'a dazzling flash of light', 'flowers sprout in a circle around startTarget', "justTarget can't smell anymore", 'everything within a 3-meter radius is suddenly clean and tidy']
  var undeadList = ['good as new', 'zombies', 'skeletons', 'vampires', 'liches']
  var attractList = ['animals', 'monsters', 'people justTarget findSHere attractive', 'bugs', 'bees']
  attractList = attractList.concat(animalList)
@@ -587,10 +600,6 @@ var miscList = ['thinkSHere justTarget are a', 'attacked by', 'all corpses withi
 
 function magicFX() {
  var magCat = randomPick(magCatList);
- var repeat = 1
- if (magCat == 'sensorium'){
-   repeat = 2
- }
 
  var magic = '';
  var append = '';
@@ -609,24 +618,24 @@ function magicFX() {
  }
  switch(true) {
    case (areaTarget == 'you'):
-     areaTargetType = 'you'
+     areaTargetType = 'you';
      break;
    case (areaTarget == 'your chosen target' || areaTarget == 'everyone in sight'):
-     areaTargetType = 'they'
+     areaTargetType = 'they';
      break;
    case (areaTarget == 'whatever is most important nearby'):
-     areaTargetType = 'it'
+     areaTargetType = 'it';
      break;
  }
  switch(true) {
    case (genTarget == 'you'):
-     genTargetType = 'you'
+     genTargetType = 'you';
      break;
    case (genTarget == 'your chosen target'):
-     genTargetType = 'target'
+     genTargetType = 'target';
      break;
    case (genTarget == 'everyone in sight'):
-     genTargetType = 'every'
+     genTargetType = 'every';
      break;
  }
 
@@ -646,7 +655,7 @@ function magicFX() {
    case (magCat== 'abilityTo'):
      effect = randomPick(abilityToList);
      targetType = 'direct';
-     magic += directTarget + ' gainSHere the ability to '
+     magic += directTarget + ' gainSHere the ability to ';
      if (inside(effect, abilityAbsoluteList) == false) {
        var notWell = Math.random();
        if (notWell <= 0.3) {
@@ -665,11 +674,13 @@ function magicFX() {
    //control
    case (magCat == 'control'):
      effect = randomPick(controlList);
-     targetType = 'direct'
-     magic += directTarget + ' can now control '
+     targetType = 'direct';
+     magic += directTarget + ' can now control ';
      var notWell = Math.random();
      if (notWell <= 0.3) {
        append = ', but not very well, ';
+     } else {
+     	effect += ' ';
      }
      if (duration == 'for wildcard') {
        duration = 'until ' + randomPick(goodWildDurations);
@@ -680,7 +691,7 @@ function magicFX() {
    case (magCat == 'immunity'):
      effect = randomPick(immunityList) + ' ';
      targetType = 'direct';
-     magic += directTarget + ' areIs now immune to '
+     magic += directTarget + ' areIs now immune to ';
      if (duration == 'for wildcard') {
        duration = 'until ' + randomPick(goodWildDurations);
      }
@@ -704,7 +715,7 @@ function magicFX() {
    case (magCat == 'statusEffect'):
      effect = randomPick(statusEffectList);
      targetType = 'direct';
-     magic += directTarget + ' areIs now '
+     magic += directTarget + ' areIs now ';
      if (inside(effect, statusInstantList) == false) {
        duration = ' for ' + randomPick(statusDurationList);
      } else {
@@ -717,7 +728,7 @@ function magicFX() {
    case (magCat == 'transform'):
      effect = randomPick(transformList) + ' ';
      targetType = 'area';
-     magic += areaTarget + ' transformSHere into '
+     magic += areaTarget + ' transformSHere into ';
      if (duration == 'for wildcard') {
        duration = 'until ' + randomPick(wildDurations);
      }
@@ -732,10 +743,11 @@ function magicFX() {
      } else {
        duration = ' ' + duration
      }
-     if (effect == 'illusion'){
-       effect = 'appear'
-     }
      list = eval(effect + 'List');
+     if (effect == 'illusion'){
+       effect = 'appear';
+       list = illusionList;
+     }
      magic += genTarget + ' ';
      effect += 'SHere ' + randomPick(list);
    break;
