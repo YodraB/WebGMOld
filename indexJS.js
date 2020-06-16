@@ -11,7 +11,7 @@ function print(str) {
  if (document.getElementById("display").value == '') {
    document.getElementById("display").value = str;
  } else {
-   document.getElementById("display").value = (document.getElementById("display").value + " \n" + str);
+   document.getElementById("display").value = (str + "\n" + document.getElementById("display").value);
 }
 }
 
