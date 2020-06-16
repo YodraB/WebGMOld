@@ -233,7 +233,11 @@ function character() {
  var sex = randomPick(sexes);
  var char = randomPick(characteristics);
  print(age + ', ' + sex + ', ' + char);
- return age, sex, char
+}
+
+function characteristic(){
+  var char = randomPick(characteristics);
+  print(char);
 }
 
 
